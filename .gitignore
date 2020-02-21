@@ -38,3 +38,6 @@ sysinfo.txt
 #Rider files
 *.idea
 *JetBrains*
+*Editor.meta*
+*Plugins.meta*
+#Pour l'instant j'ignore aussi les deux .meta, a terme on les ajoutera peut etre
