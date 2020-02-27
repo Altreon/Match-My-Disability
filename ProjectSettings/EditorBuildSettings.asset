@@ -6,6 +6,6 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/_MAIN/SampleScene.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
+    path: Assets/Scenes/Altreon/SampleScene.unity
+    guid: ff8447ee1a73cd74eb79e4ca245a2a8d
   m_configObjects: {}
