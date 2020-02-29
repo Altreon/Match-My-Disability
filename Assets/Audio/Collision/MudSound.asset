@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f53ece2ec76b62c48a01c095e7cfd968, type: 3}
+  m_Name: MudSound
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: 30f6b3d918249d54cb203024aeeb8129, type: 3}
+  - {fileID: 8300000, guid: b731c39ce9fc88647a6a82860c9b7245, type: 3}
+  - {fileID: 8300000, guid: ddd1bd687a513df4885bcc358512ef60, type: 3}
+  - {fileID: 8300000, guid: fcc235e6222996c48b3010fe651c5446, type: 3}
+  - {fileID: 8300000, guid: 39874009b9c34344e8f1bc316de8cdbb, type: 3}
+  - {fileID: 8300000, guid: 8916da4f323f93641a8fc818f3f11d6a, type: 3}
+  - {fileID: 8300000, guid: a0ad112836b0a884393b2c121c301c46, type: 3}
+  - {fileID: 8300000, guid: d8137161f2bda4e4a94e0589b60ce1f7, type: 3}
+  - {fileID: 8300000, guid: d28fc9be888e4d94785203a9c92ba115, type: 3}

@@ -1,0 +1,36 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f53ece2ec76b62c48a01c095e7cfd968, type: 3}
+  m_Name: BrickSound
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: cfa54f4d9bcbcf740a9d483298cec59c, type: 3}
+  - {fileID: 8300000, guid: bcd287348548f1e47915f135eeaede6e, type: 3}
+  - {fileID: 8300000, guid: 76957d8f90b7631419ea074dc5d83e69, type: 3}
+  - {fileID: 8300000, guid: 7ebf361f0c7da6a4f895970a13bee939, type: 3}
+  - {fileID: 8300000, guid: 99edc5f08b3c6974baaa113cc9499d26, type: 3}
+  - {fileID: 8300000, guid: 6227a4ddf89cbfd478e3b94e64cde015, type: 3}
+  - {fileID: 8300000, guid: e4dcfe90703a8424a818977053effd33, type: 3}
+  - {fileID: 8300000, guid: 32b67910e1bc8924eb3223d0eba5d849, type: 3}
+  - {fileID: 8300000, guid: 89fa3dc9e97968b4fa74582cfec416f8, type: 3}
+  - {fileID: 8300000, guid: 0e424668934cd104fa28f88decca379b, type: 3}
+  - {fileID: 8300000, guid: abb41aced0710ed4485bc801ab0c34d3, type: 3}
+  - {fileID: 8300000, guid: 8f9c558c2e44d074f9f8b15f5897136c, type: 3}
+  - {fileID: 8300000, guid: 71a8ed1f2e68c784fa37926c449f1259, type: 3}
+  - {fileID: 8300000, guid: dc2982ee2260c474ea6013b7a09ecc51, type: 3}
+  - {fileID: 8300000, guid: c6bb9d29b5496da4ca7ab96252fe8298, type: 3}
+  - {fileID: 8300000, guid: 1ea907c51361e8449a943f83e0947244, type: 3}
+  - {fileID: 8300000, guid: 9575c43fbc923a240b05f2c10ce3b0fc, type: 3}
+  - {fileID: 8300000, guid: 670440da6231a294c90c49e567d4f004, type: 3}
+  - {fileID: 8300000, guid: 8aa47351a458e5e4d97d36eb65a650f6, type: 3}
+  - {fileID: 8300000, guid: 7dd82782a44125d4d853c62fc06501d6, type: 3}
+  - {fileID: 8300000, guid: 1cee876676f42204aa8c852917d0e4cf, type: 3}
