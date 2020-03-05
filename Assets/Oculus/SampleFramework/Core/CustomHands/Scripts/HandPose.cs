@@ -13,7 +13,8 @@ namespace OVRTouchSample
         Default,
         Generic,
         PingPongBall,
-        Controller
+        Controller,
+        CupGrab
     }
 
     public class HandPose : MonoBehaviour
