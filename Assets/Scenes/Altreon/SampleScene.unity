@@ -15094,7 +15094,7 @@ MonoBehaviour:
   m_allowOffhandGrab: 1
   m_snapPosition: 1
   m_snapOrientation: 1
-  m_snapOffset: {fileID: 1965666252}
+  m_snapOffset: {fileID: 0}
   m_grabPoints: []
 --- !u!114 &8400513884895238588
 MonoBehaviour:
