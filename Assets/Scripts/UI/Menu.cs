@@ -5,33 +5,49 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
-    private bool m_isStar;
+    private bool m_isLevelButtonPressed = false;
+    private bool m_isDoorOpen = false;
     private bool m_isQuit;
+    //private bool m_isPressed = false;
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    void ButtonPressed(string button)
+    public void ButtonPressed(string button)
     {
         switch (button)
         {
-            case "startButton":
+            case "levelOneButton":
+                if (m_isLevelButtonPressed) return;
                 Debug.Log("sceneName to load: 'LevelOne'");
+                m_isLevelButtonPressed = true;
                 SceneManager.LoadScene("LevelOne");
                 return;
+            case "levelTwoButton":
+                if (m_isLevelButtonPressed) return;
+                Debug.Log("sceneName to load: 'LevelTwo'");
+                m_isLevelButtonPressed = true;
+                SceneManager.LoadScene("LevelTwo");
+                return;
+            case "DoorButton":
+                
             default:
                 Debug.Log("Button invalid");
                 return;
         }
     }
+
+    private void AnimationDoor()
+    {
+        if (!m_isDoorOpen)
+        {
+            Debug.Log("Door will open");
+            m_isDoorOpen = true;
+        }
+        else
+        {
+            Debug.Log("Door will close");
+            m_isDoorOpen = false;
+        }
+    }
+
 }
+
+
