@@ -45,3 +45,4 @@ sysinfo.txt
 #Truc bizarre de Elfo
 mono_crash*.json*
 .mono_crash*.json*
+*.DS_Store*
