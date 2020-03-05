@@ -1096,13 +1096,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 631438308}
-  m_LocalRotation: {x: -0, y: 1, z: -0, w: -0.0000023841856}
-  m_LocalPosition: {x: -8.36691, y: -0.3618269, z: -0.56688815}
-  m_LocalScale: {x: 2.295684, y: 2.295684, z: 2.295684}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -0.05630146, y: 0.13937426, z: 0.0055966526}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8400513884895550764}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!1 &696521268
 GameObject:
   m_ObjectHideFlags: 0
@@ -5480,7 +5480,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1447837303
 Transform:
   m_ObjectHideFlags: 0
@@ -17495,9 +17495,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_allowOffhandGrab: 1
-  m_snapPosition: 0
-  m_snapOrientation: 0
-  m_snapOffset: {fileID: 0}
+  m_snapPosition: 1
+  m_snapOrientation: 1
+  m_snapOffset: {fileID: 631438309}
   m_grabPoints: []
 --- !u!114 &8400513884895238588
 MonoBehaviour:
