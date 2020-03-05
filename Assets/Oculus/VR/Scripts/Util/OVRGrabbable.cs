@@ -37,6 +37,11 @@ public class OVRGrabbable : MonoBehaviour
     protected Collider m_grabbedCollider = null;
     protected OVRGrabber m_grabbedBy = null;
 
+    //MODIFICATION
+    public Color hightLightColor;
+    Renderer m_renderer;
+    MaterialPropertyBlock m_mpb;
+
 	/// <summary>
 	/// If true, the object can currently be grabbed.
 	/// </summary>
@@ -151,6 +156,26 @@ public class OVRGrabbable : MonoBehaviour
     protected virtual void Start()
     {
         m_grabbedKinematic = GetComponent<Rigidbody>().isKinematic;
+
+        //MODIFICATION
+        m_renderer = gameObject.GetComponent<Renderer>();
+        m_mpb = new MaterialPropertyBlock();
+        m_mpb.SetColor("_OutlineColor", Color.white);
+        m_renderer.SetPropertyBlock(m_mpb);
+    }
+
+    //MODIFICATION
+    public void SetHightLight()
+        {
+            m_mpb.SetColor("_OutlineColor", hightLightColor);
+            m_renderer.SetPropertyBlock(m_mpb);
+        }
+
+    //MODIFICATION
+    public void ClearHightLight()
+    {
+        m_mpb.SetColor("_OutlineColor", Color.clear);
+        m_renderer.SetPropertyBlock(m_mpb);
     }
 
     void OnDestroy()

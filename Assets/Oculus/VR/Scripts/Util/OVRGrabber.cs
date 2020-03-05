@@ -195,6 +195,9 @@ public class OVRGrabber : MonoBehaviour
         int refCount = 0;
         m_grabCandidates.TryGetValue(grabbable, out refCount);
         m_grabCandidates[grabbable] = refCount + 1;
+
+        //MODIFICATION
+        RefreshHighlight();
     }
 
     void OnTriggerExit(Collider otherCollider)
@@ -217,6 +220,42 @@ public class OVRGrabber : MonoBehaviour
         else
         {
             m_grabCandidates.Remove(grabbable);
+        }
+
+        //MODIFICATION
+        grabbable.ClearHightLight();
+        RefreshHighlight();
+    }
+
+    //MODIFICATION
+    void RefreshHighlight () {
+        float closestMagSq = float.MaxValue;
+		OVRGrabbable closestGrabbable = null;
+
+        foreach (OVRGrabbable grabbable in m_grabCandidates.Keys)
+        {
+            bool canGrab = !(grabbable.isGrabbed && !grabbable.allowOffhandGrab);
+            if (!canGrab)
+            {
+                continue;
+            }
+
+            for (int j = 0; j < grabbable.grabPoints.Length; ++j)
+            {
+                Collider grabbableCollider = grabbable.grabPoints[j];
+                // Store the closest grabbable
+                Vector3 closestPointOnBounds = grabbableCollider.ClosestPointOnBounds(m_gripTransform.position);
+                float grabbableMagSq = (m_gripTransform.position - closestPointOnBounds).sqrMagnitude;
+                if (grabbableMagSq < closestMagSq)
+                {
+                    closestMagSq = grabbableMagSq;
+                    closestGrabbable = grabbable;
+                }
+            }
+        }
+
+        if(closestGrabbable){
+            closestGrabbable.SetHightLight();
         }
     }
 
