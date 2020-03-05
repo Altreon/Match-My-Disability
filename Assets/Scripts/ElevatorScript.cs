@@ -3,17 +3,24 @@ using System.Collections.Generic;
 using UnityEngine;
 public class ElevatorScript : MonoBehaviour
 {
-    public Animator anim;
-    // Start is called before the first frame update
-    private void Awake() 
-    {
-        anim = GetComponent<Animator>();
-    }
+    public Animation anim;
+    public AnimationClip openDoorElevator;
+    public AnimationClip ClosenDoorElevator;
 
 
     // Update is called once per frame
     void Update()
     {
+        if(Input.GetKeyDown(KeyCode.Space))
+        {
+            anim.clip = openDoorElevator;
+            anim.Play();
+        }
         
+        if(Input.GetKeyDown(KeyCode.N))
+        {
+            anim.clip = ClosenDoorElevator;
+            anim.Play();
+        }
     }
 }
