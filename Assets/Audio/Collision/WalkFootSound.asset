@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f53ece2ec76b62c48a01c095e7cfd968, type: 3}
+  m_Name: WalkFootSound
+  m_EditorClassIdentifier: 
+  clips:
+  - {fileID: 8300000, guid: b844af1b2b7e09b4d9eef22358c6afc4, type: 3}
+  - {fileID: 8300000, guid: 21a82ccc682409946ae43cb0d79ecf99, type: 3}
+  - {fileID: 8300000, guid: 67a5d15848fef2a418ff41412daf7406, type: 3}
+  - {fileID: 8300000, guid: 0c41602c99059474a957c7799221ff53, type: 3}
+  - {fileID: 8300000, guid: 153f1754593fefa42b6115f482e6b636, type: 3}
+  - {fileID: 8300000, guid: e4b188d5fad7cfa4f9a6d1d4b77f22be, type: 3}
+  - {fileID: 8300000, guid: 0b660136421086e4abe88e51acbc36bd, type: 3}
+  - {fileID: 8300000, guid: 67c86f2be2eaaf74e89978bebafe8d79, type: 3}
+  - {fileID: 8300000, guid: 2aafa20de9cf7344cacfa57b0c14d1c0, type: 3}
+  - {fileID: 8300000, guid: 01d6fcf3e1cf96e45835eef519915869, type: 3}
+  - {fileID: 8300000, guid: af9e3703cc4e34c4c9c8576db5050841, type: 3}
