@@ -27,9 +27,9 @@ public class WheelchairController : MonoBehaviour
         {
             //Déplacement vertical
             if(axis.y > 0f)
-                transform.Translate(wheelchair.right * -1f * forwardSpeed * Time.deltaTime);
+                transform.Translate(wheelchair.right * -1f * forwardSpeed * Time.deltaTime, Space.Self);
             else
-                transform.Translate(wheelchair.right * backwardSpeed * Time.deltaTime);
+                transform.Translate(wheelchair.right * backwardSpeed * Time.deltaTime, Space.Self);
         }
         else
         {
