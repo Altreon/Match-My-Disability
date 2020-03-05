@@ -43,4 +43,4 @@ sysinfo.txt
 #Pour l'instant j'ignore aussi les deux .meta, a terme on les ajoutera peut etre
 
 #Truc bizarre de Elfo
-mono_crash*.json
+mono_crash*.json*
