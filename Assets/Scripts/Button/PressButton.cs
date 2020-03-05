@@ -7,7 +7,8 @@ public class PressButton : MonoBehaviour
 {
     public UnityEvent clickEvent;
     
-    void click () {
+    public void click () {
+		Debug.Log("button click");
         clickEvent.Invoke();
     }
 }
