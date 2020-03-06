@@ -11,10 +11,10 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Altreon/SampleScene.unity
     guid: ff8447ee1a73cd74eb79e4ca245a2a8d
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Jalik/SampleScene_JALIK.unity
     guid: 453064712c6dcc44bbff90cf9dd76aed
   m_configObjects: {}
