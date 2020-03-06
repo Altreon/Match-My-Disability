@@ -160,7 +160,7 @@ public class OVRGrabbable : MonoBehaviour
         //MODIFICATION
         m_renderer = gameObject.GetComponent<Renderer>();
         m_mpb = new MaterialPropertyBlock();
-        m_mpb.SetColor("_OutlineColor", Color.white);
+        ClearHightLight();
         m_renderer.SetPropertyBlock(m_mpb);
     }
 
