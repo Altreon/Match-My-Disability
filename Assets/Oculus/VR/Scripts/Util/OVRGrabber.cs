@@ -362,6 +362,9 @@ public class OVRGrabber : MonoBehaviour
             {
                 m_grabbedObj.transform.parent = transform;
             }
+
+            //MODIFICATION
+            closestGrabbable.ClearHightLight();
         }
     }
 
