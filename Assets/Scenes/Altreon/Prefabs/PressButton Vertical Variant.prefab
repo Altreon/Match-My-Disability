@@ -30,12 +30,12 @@ PrefabInstance:
     - target: {fileID: 874512317554884081, guid: d456d7b940a05db499784d8d74fb0f08,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.1
+      value: -0.0225
       objectReference: {fileID: 0}
     - target: {fileID: 874512317727877000, guid: d456d7b940a05db499784d8d74fb0f08,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: 0.912
       objectReference: {fileID: 0}
     - target: {fileID: 874512317727877000, guid: d456d7b940a05db499784d8d74fb0f08,
         type: 3}
@@ -50,7 +50,7 @@ PrefabInstance:
     - target: {fileID: 874512317727877000, guid: d456d7b940a05db499784d8d74fb0f08,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 874512317727877000, guid: d456d7b940a05db499784d8d74fb0f08,
         type: 3}
@@ -65,7 +65,7 @@ PrefabInstance:
     - target: {fileID: 874512317727877000, guid: d456d7b940a05db499784d8d74fb0f08,
         type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 874512317727877000, guid: d456d7b940a05db499784d8d74fb0f08,
         type: 3}
@@ -75,7 +75,7 @@ PrefabInstance:
     - target: {fileID: 874512317727877000, guid: d456d7b940a05db499784d8d74fb0f08,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 874512317727877000, guid: d456d7b940a05db499784d8d74fb0f08,
         type: 3}
@@ -125,7 +125,7 @@ PrefabInstance:
     - target: {fileID: 874512317727877012, guid: d456d7b940a05db499784d8d74fb0f08,
         type: 3}
       propertyPath: m_Name
-      value: PressButton Vertical
+      value: PressButton Vertical Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d456d7b940a05db499784d8d74fb0f08, type: 3}
