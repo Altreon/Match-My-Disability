@@ -13665,7 +13665,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4581183180352677}
-  - component: {fileID: 1499971883877064}
   m_Layer: 0
   m_Name: hands:l_hand_world
   m_TagString: Untagged
@@ -13673,19 +13672,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!65 &1499971883877064
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1499971883877063}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.1, y: 0.1, z: 0.1}
-  m_Center: {x: 0, y: -0.08, z: -0.12}
 --- !u!1 &1507294204378048
 GameObject:
   m_ObjectHideFlags: 0
