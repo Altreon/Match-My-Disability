@@ -195,6 +195,9 @@ public class OVRGrabber : MonoBehaviour
         int refCount = 0;
         m_grabCandidates.TryGetValue(grabbable, out refCount);
         m_grabCandidates[grabbable] = refCount + 1;
+
+        //MODIFICATION
+        RefreshHighlight();
     }
 
     void OnTriggerExit(Collider otherCollider)
@@ -217,6 +220,42 @@ public class OVRGrabber : MonoBehaviour
         else
         {
             m_grabCandidates.Remove(grabbable);
+        }
+
+        //MODIFICATION
+        grabbable.ClearHightLight();
+        RefreshHighlight();
+    }
+
+    //MODIFICATION
+    void RefreshHighlight () {
+        float closestMagSq = float.MaxValue;
+		OVRGrabbable closestGrabbable = null;
+
+        foreach (OVRGrabbable grabbable in m_grabCandidates.Keys)
+        {
+            bool canGrab = !(grabbable.isGrabbed && !grabbable.allowOffhandGrab);
+            if (!canGrab)
+            {
+                continue;
+            }
+
+            for (int j = 0; j < grabbable.grabPoints.Length; ++j)
+            {
+                Collider grabbableCollider = grabbable.grabPoints[j];
+                // Store the closest grabbable
+                Vector3 closestPointOnBounds = grabbableCollider.ClosestPointOnBounds(m_gripTransform.position);
+                float grabbableMagSq = (m_gripTransform.position - closestPointOnBounds).sqrMagnitude;
+                if (grabbableMagSq < closestMagSq)
+                {
+                    closestMagSq = grabbableMagSq;
+                    closestGrabbable = grabbable;
+                }
+            }
+        }
+
+        if(closestGrabbable){
+            closestGrabbable.SetHightLight();
         }
     }
 
@@ -284,8 +323,10 @@ public class OVRGrabber : MonoBehaviour
                 m_grabbedObjectPosOff = m_gripTransform.localPosition;
                 if(m_grabbedObj.snapOffset)
                 {
+                    //MODIFICATION
+                    //Vector3 snapOffset = m_grabbedObj.snapOffset.position;
                     Vector3 snapOffset = m_grabbedObj.snapOffset.localPosition;
-                    if (m_controller == OVRInput.Controller.LTouch) snapOffset.x = -snapOffset.x;
+					if (m_controller == OVRInput.Controller.LTouch) snapOffset.x = -snapOffset.x;
                     m_grabbedObjectPosOff += snapOffset;
                 }
             }
@@ -301,7 +342,9 @@ public class OVRGrabber : MonoBehaviour
                 m_grabbedObjectRotOff = m_gripTransform.localRotation;
                 if(m_grabbedObj.snapOffset)
                 {
-                    m_grabbedObjectRotOff = m_grabbedObj.snapOffset.rotation * m_grabbedObjectRotOff;
+                    //MODIFICATION
+                    //m_grabbedObjectRotOff = m_grabbedObj.snapOffset.rotation * m_grabbedObjectRotOff;
+                    m_grabbedObjectRotOff = m_grabbedObj.snapOffset.localRotation * m_grabbedObjectRotOff;
                 }
             }
             else
