@@ -4032,9 +4032,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deadzone: 0.25
-  forwardSpeed: 5
-  backwardSpeed: 2.5
-  rotateSpeed: 10
+  forwardSpeed: 3
+  backwardSpeed: 1.5
+  rotateSpeed: 15
   wheelchair: {fileID: 3401776656339046793}
   player: {fileID: 7660408658145726452}
   forwardMove: {x: 0, y: 0, z: 1}
@@ -6905,7 +6905,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7660408659825510267}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.142, z: 0}
+  m_LocalPosition: {x: 0, y: 1.392, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7660408659825810257}

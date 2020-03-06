@@ -10,8 +10,12 @@ public class WheelchairController : MonoBehaviour
     [SerializeField] private float rotateSpeed;
     [SerializeField] private Transform wheelchair;
     [SerializeField] private Transform player;
-    [SerializeField] private Vector3 forwardMove;
+    
+    private static Vector3 forwardVector = new Vector3(0f, 0f, 1f);
+    private static Vector3 backwardVector = new Vector3(0f, 0f, -1f);
     // Start is called before the first frame update
+    
+    
     void Start()
     {
         
@@ -27,9 +31,9 @@ public class WheelchairController : MonoBehaviour
         {
             //Déplacement vertical
             if(axis.y > 0f)
-                transform.Translate(wheelchair.right * -1f * forwardSpeed * Time.deltaTime, Space.Self);
+                transform.Translate(forwardVector * forwardSpeed * Time.deltaTime);
             else
-                transform.Translate(wheelchair.right * backwardSpeed * Time.deltaTime, Space.Self);
+                transform.Translate(backwardVector *  backwardSpeed * Time.deltaTime);
         }
         else
         {
@@ -42,6 +46,6 @@ public class WheelchairController : MonoBehaviour
                 transform.Rotate(0f, rotateSpeed * -1f * Time.deltaTime, 0f);
             }
         }
- 
+        
     }
 }

@@ -1528,6 +1528,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
+  hightLightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &1066891408958242195
 Transform:
   m_ObjectHideFlags: 0
@@ -1977,6 +1978,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
+  hightLightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!23 &2058078787151450863
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2326,6 +2328,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
+  hightLightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &3774562988197563027
 GameObject:
   m_ObjectHideFlags: 0
@@ -2772,6 +2775,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
+  hightLightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &5148553590116461559
 Transform:
   m_ObjectHideFlags: 0
@@ -3009,6 +3013,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
+  hightLightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &6071858603623019406
 Transform:
   m_ObjectHideFlags: 0
@@ -3605,6 +3610,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
+  hightLightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!54 &7030375923813676828
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -3797,6 +3803,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
+  hightLightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &7278555872780864312
 Transform:
   m_ObjectHideFlags: 0
@@ -3893,6 +3900,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
+  hightLightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!33 &7598417720239222096
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -3960,7 +3968,7 @@ PrefabInstance:
     - target: {fileID: 7660408658145726452, guid: d23ca91b74582904092b410d86b95fa8,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -7.74
+      value: -9.51
       objectReference: {fileID: 0}
     - target: {fileID: 7660408658145726452, guid: d23ca91b74582904092b410d86b95fa8,
         type: 3}
@@ -4156,6 +4164,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
+  hightLightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &8299975205242867954
 Transform:
   m_ObjectHideFlags: 0
@@ -4332,6 +4341,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
+  hightLightColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &8400513884895550764
 Transform:
   m_ObjectHideFlags: 0
