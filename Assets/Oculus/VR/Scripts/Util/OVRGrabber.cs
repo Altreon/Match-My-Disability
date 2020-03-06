@@ -343,8 +343,8 @@ public class OVRGrabber : MonoBehaviour
                 if(m_grabbedObj.snapOffset)
                 {
                     //MODIFICATION
-                    //m_grabbedObjectRotOff = m_grabbedObj.snapOffset.rotation * m_grabbedObjectRotOff;
-                    m_grabbedObjectRotOff = m_grabbedObj.snapOffset.localRotation * m_grabbedObjectRotOff;
+                    m_grabbedObjectRotOff = m_grabbedObj.snapOffset.rotation * m_grabbedObjectRotOff;
+                    //m_grabbedObjectRotOff = m_grabbedObj.snapOffset.localRotation * m_grabbedObjectRotOff;
                 }
             }
             else
