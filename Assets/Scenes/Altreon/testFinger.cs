@@ -14,7 +14,7 @@ public class testFinger : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = new Vector3(transform.position.x, transform.position.y - speed * Time.deltaTime, transform.position.z);
+        GetComponent<Rigidbody>().AddForce(-transform.up * speed, ForceMode.VelocityChange);
         //transform.position.y -= 20;
     }
 }
