@@ -11,7 +11,7 @@ public class ClickDetector : MonoBehaviour
     }
     void OnCollisionEnter(Collision collision) {
         if(collision.transform.tag == "Button") {
-            //button.click();
+            button.click();
         }
     }
 }

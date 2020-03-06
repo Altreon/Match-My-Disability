@@ -188,11 +188,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PressButton Vertical Variant
       objectReference: {fileID: 0}
-    - target: {fileID: 6845783131500773596, guid: dfbed72cff4c3da438962d85117c8ce9,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfbed72cff4c3da438962d85117c8ce9, type: 3}
 --- !u!1 &817411690
@@ -354,11 +349,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: PressButton
       objectReference: {fileID: 0}
-    - target: {fileID: 874512317727877012, guid: d456d7b940a05db499784d8d74fb0f08,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d456d7b940a05db499784d8d74fb0f08, type: 3}
 --- !u!1 &1339637333
@@ -381,7 +371,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!54 &1339637334
 Rigidbody:
   m_ObjectHideFlags: 0
