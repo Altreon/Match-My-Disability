@@ -3996,6 +3996,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7660408658145726452}
   - component: {fileID: 7660408658145726453}
+  - component: {fileID: 1417667197176546141}
   m_Layer: 0
   m_Name: Wheelchair_and_player
   m_TagString: Untagged
@@ -4037,7 +4038,19 @@ MonoBehaviour:
   rotateSpeed: 15
   wheelchair: {fileID: 3401776656339046793}
   player: {fileID: 7660408658145726452}
-  forwardMove: {x: 0, y: 0, z: 1}
+--- !u!65 &1417667197176546141
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7660408658145726459}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.9175104, y: 0.77727747, z: 1.404199}
+  m_Center: {x: 0.008248985, y: 0.36707908, z: 0.20209959}
 --- !u!1 &7660408659164553468
 GameObject:
   m_ObjectHideFlags: 0
