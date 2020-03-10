@@ -320,14 +320,31 @@ public class OVRGrabber : MonoBehaviour
             // Set up offsets for grabbed object desired position relative to hand.
             if(m_grabbedObj.snapPosition)
             {
-                m_grabbedObjectPosOff = m_gripTransform.localPosition;
+                //MODIFICATION
+                //m_grabbedObjectPosOff = m_gripTransform.localPosition;
                 if(m_grabbedObj.snapOffset)
                 {
-                    //MODIFICATION
                     //Vector3 snapOffset = m_grabbedObj.snapOffset.position;
                     Vector3 snapOffset = m_grabbedObj.snapOffset.localPosition;
+                    /*float temp = snapOffset.x;
+                    snapOffset.x = snapOffset.z;
+                    snapOffset.z = temp;*/
+                    //snapOffset.x = 0; hauteur
+					//snapOffset.y = 0; profondeur
+					
+					float temp = snapOffset.x;
+					snapOffset.x = snapOffset.y;
+					snapOffset.y = -snapOffset.z;
+					snapOffset.z = -temp;
+                    /*Vector3 snapOffsetScale = m_grabbedObj.snapOffset.localScale;
+                    snapOffset = new Vector3(snapOffset.x, snapOffset.y / snapOffsetScale.y, snapOffset.z);*/
+					
+					/*snapOffset = Quaternion.AngleAxis(90, Vector3.up) * snapOffset;
+					snapOffset = Quaternion.AngleAxis(-90, Vector3.forward) * snapOffset;*/
 					if (m_controller == OVRInput.Controller.LTouch) snapOffset.x = -snapOffset.x;
-                    m_grabbedObjectPosOff += snapOffset;
+                    m_grabbedObjectPosOff = snapOffset;
+                }else{
+                    m_grabbedObjectPosOff = Vector3.zero;
                 }
             }
             else
@@ -339,12 +356,14 @@ public class OVRGrabber : MonoBehaviour
 
             if (m_grabbedObj.snapOrientation)
             {
-                m_grabbedObjectRotOff = m_gripTransform.localRotation;
+                //MODIFICATION
+                //m_grabbedObjectRotOff = m_gripTransform.localRotation;
                 if(m_grabbedObj.snapOffset)
                 {
-                    //MODIFICATION
-                    m_grabbedObjectRotOff = m_grabbedObj.snapOffset.rotation * m_grabbedObjectRotOff;
-                    //m_grabbedObjectRotOff = m_grabbedObj.snapOffset.localRotation * m_grabbedObjectRotOff;
+                    //m_grabbedObjectRotOff = m_grabbedObj.snapOffset.rotation * m_grabbedObjectRotOff;
+                    m_grabbedObjectRotOff = Quaternion.Inverse(m_grabbedObj.snapOffset.localRotation);
+                }else{
+                    m_grabbedObjectRotOff = Quaternion.identity;
                 }
             }
             else
