@@ -5,6 +5,7 @@ using UnityEngine;
 public class ButtonPosKeeper : MonoBehaviour
 {
     public Transform buttonLimit;
+    public Transform downButton;
     public float supOffset = 0.03f;
 
     float normalDist;
@@ -14,7 +15,7 @@ public class ButtonPosKeeper : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        normalDist = Vector3.Distance(buttonLimit.position, transform.position);
+        normalDist = Vector3.Distance(buttonLimit.position, downButton.position);
         originalPos = transform.position;
 
         rb = GetComponent<Rigidbody>();
@@ -23,11 +24,14 @@ public class ButtonPosKeeper : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        float distFromLimit = Vector3.Distance(buttonLimit.position, transform.position);
-        float distFromOrigin = Vector3.Distance(originalPos, transform.position);
+        float distFromLimit = Vector3.Distance(buttonLimit.position, downButton.position);
+        //float distFromOrigin = Vector3.Distance(buttonLimit.position, transform.position);
 
-        if(!locked && (distFromLimit > normalDist + supOffset || distFromOrigin > normalDist)){
+        //Debug.Log(distFromLimit + " : " + supOffset);
+
+        if(!locked && (distFromLimit < supOffset || distFromLimit > normalDist + supOffset)){
             //transform.position = originalPos;
+            Debug.Log("Freeze");
             rb.constraints = RigidbodyConstraints.FreezeAll;
             locked = true;
         }
@@ -39,6 +43,7 @@ public class ButtonPosKeeper : MonoBehaviour
         }
 
          //if (collision.gameObject.tag == "Hand") {
+             Debug.Log("UnFreeze");
              rb.constraints &= ~RigidbodyConstraints.FreezePositionY; 
          //}
      }
