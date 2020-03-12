@@ -9,7 +9,6 @@ public class ElevatorAnimationScript : MonoBehaviour
     public AnimationClip ClosenDoorElevatorAnimation;
 
     private bool m_isDoorOpen = false;
-    public SceneControler m_sceneControler;
 
     public void OpenDoor()
     {
@@ -19,7 +18,7 @@ public class ElevatorAnimationScript : MonoBehaviour
             m_isDoorOpen = true;
             anim.clip = openDoorElevatorAnimation;
             anim.Play();
-            StartCoroutine(WaitForAnimationEnd(-1));
+            StartCoroutine(WaitForAnimationEnd());
         }
         else
         {
@@ -28,7 +27,7 @@ public class ElevatorAnimationScript : MonoBehaviour
     }
 
 
-    public void CloseDoor(int levelIndex)
+    public void CloseDoor()
     {
         if (m_isDoorOpen && !anim.isPlaying)
         {
@@ -36,7 +35,7 @@ public class ElevatorAnimationScript : MonoBehaviour
             m_isDoorOpen = false;
             anim.clip = ClosenDoorElevatorAnimation;
             anim.Play();
-            StartCoroutine(WaitForAnimationEnd(levelIndex));
+            StartCoroutine(WaitForAnimationEnd());
         }
         else
         {
@@ -45,18 +44,13 @@ public class ElevatorAnimationScript : MonoBehaviour
     }
 
 
-    IEnumerator WaitForAnimationEnd(int levelIndex)
+    IEnumerator WaitForAnimationEnd()
     {
         while (anim.isPlaying)
             yield return null;
-        if (levelIndex >= 0)
-        {
-            m_sceneControler.LoadLevelCoroutine(levelIndex);
-            OpenDoor();
-        }
     }
 
-
+    /*
     // Update is called once per frame
     void Update()
     {
@@ -67,8 +61,9 @@ public class ElevatorAnimationScript : MonoBehaviour
         
         if(Input.GetKeyDown(KeyCode.N))
         {
-            CloseDoor(1);
+            CloseDoor();
         }
 
     }
+    */
 }

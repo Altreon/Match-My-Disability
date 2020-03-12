@@ -6,9 +6,10 @@ using UnityEngine.SceneManagement;
 public class SceneControler : MonoBehaviour
 {
 
-    private int m_currentScene;
+    //private int m_currentScene;
+    public ElevatorAnimationScript m_elevatorAnimationScript;
 
-
+    /*
     // Start is called before the first frame update
     void Start()
     {
@@ -20,9 +21,9 @@ public class SceneControler : MonoBehaviour
     {
         //StartCoroutine(LoadLeve(0));
     }
+    */
 
-
-    IEnumerator LoadLeve(int levelIndex)
+    IEnumerator LoadLeveCoroutine(int levelIndex)
     {
         AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(levelIndex);
 
@@ -32,8 +33,11 @@ public class SceneControler : MonoBehaviour
         }
     }
 
-    public void LoadLevelCoroutine(int levelIndex)
+    public void LoadLevel(int levelIndex)
     {
-        StartCoroutine(LoadLeve(levelIndex));
+        m_elevatorAnimationScript.CloseDoor();
+        StartCoroutine(LoadLeveCoroutine(levelIndex));
+        m_elevatorAnimationScript.OpenDoor();
+
     }
 }
