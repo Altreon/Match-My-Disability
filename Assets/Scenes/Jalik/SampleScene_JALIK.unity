@@ -133,6 +133,11 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 124
       objectReference: {fileID: 0}
+    - target: {fileID: 5990912498349516535, guid: dfbed72cff4c3da438962d85117c8ce9,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 3.4
+      objectReference: {fileID: 0}
     - target: {fileID: 5990912498793377613, guid: dfbed72cff4c3da438962d85117c8ce9,
         type: 3}
       propertyPath: axisConstraint
@@ -1697,6 +1702,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1192765483}
     m_Modifications:
+    - target: {fileID: 1595206180127356996, guid: 6bc33f574535bc04e9f4bb650d1d40b3,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 3.4
+      objectReference: {fileID: 0}
     - target: {fileID: 1873967762948922991, guid: 6bc33f574535bc04e9f4bb650d1d40b3,
         type: 3}
       propertyPath: m_Name

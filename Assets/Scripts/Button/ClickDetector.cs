@@ -12,12 +12,12 @@ public class ClickDetector : MonoBehaviour
         button = transform.parent.GetComponent<PressButton>();
 		audio = GetComponent<AudioSource>();
     }
-    void OnCollisionEnter(Collision collision) {
+    /*void OnCollisionEnter(Collision collision) {
         if(collision.transform.tag == "Button") {
             button.click();
 			if(!audio.isPlaying){
 				audio.Play();
 			}
         }
-    }
+    }*/
 }

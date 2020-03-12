@@ -182,6 +182,11 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 124
       objectReference: {fileID: 0}
+    - target: {fileID: 5990912498349516535, guid: dfbed72cff4c3da438962d85117c8ce9,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 3.4
+      objectReference: {fileID: 0}
     - target: {fileID: 5990912498793377613, guid: dfbed72cff4c3da438962d85117c8ce9,
         type: 3}
       propertyPath: axisConstraint
@@ -316,6 +321,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Constraints
       value: 124
+      objectReference: {fileID: 0}
+    - target: {fileID: 5990912498349516535, guid: dfbed72cff4c3da438962d85117c8ce9,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 3.4
       objectReference: {fileID: 0}
     - target: {fileID: 5990912498793377613, guid: dfbed72cff4c3da438962d85117c8ce9,
         type: 3}
@@ -558,6 +568,11 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 124
       objectReference: {fileID: 0}
+    - target: {fileID: 5990912498349516535, guid: dfbed72cff4c3da438962d85117c8ce9,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 3.4
+      objectReference: {fileID: 0}
     - target: {fileID: 5990912498793377613, guid: dfbed72cff4c3da438962d85117c8ce9,
         type: 3}
       propertyPath: axisConstraint
@@ -697,6 +712,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Constraints
       value: 124
+      objectReference: {fileID: 0}
+    - target: {fileID: 5990912498349516535, guid: dfbed72cff4c3da438962d85117c8ce9,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 3.4
       objectReference: {fileID: 0}
     - target: {fileID: 5990912498793377613, guid: dfbed72cff4c3da438962d85117c8ce9,
         type: 3}
@@ -921,6 +941,11 @@ PrefabInstance:
       propertyPath: m_sceneControler
       value: 
       objectReference: {fileID: 174086023}
+    - target: {fileID: 4524880893182701962, guid: fb1311770f751456ba1c8d5a23dfe046,
+        type: 3}
+      propertyPath: m_ConnectedAnchor.y
+      value: 3.4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb1311770f751456ba1c8d5a23dfe046, type: 3}
 --- !u!1001 &3663536006916145823
