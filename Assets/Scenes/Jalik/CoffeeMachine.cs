@@ -5,9 +5,17 @@ using UnityEngine;
 public class CoffeeMachine : MonoBehaviour
 {
     private bool cupIsPresent = false;
-
+    private bool buttonHasBeenPressed = false;
+    private AudioSource cafe;
     [SerializeField] private GameObject particles;
-    
+    [SerializeField] private OVRGrabber toActivateAtEnd;
+
+    private void Start()
+    {
+        cafe = gameObject.GetComponent<AudioSource>();
+    }
+
+
     public void SetCupIsPresent()
     {
         cupIsPresent = true;
@@ -17,13 +25,23 @@ public class CoffeeMachine : MonoBehaviour
     {
         if (cupIsPresent)
         {
-            //Play sound coffee
-            particles.SetActive(true);
-            ObjectifManager.Instance.setObjectif("coffee");
+            if(!buttonHasBeenPressed)
+            {
+                buttonHasBeenPressed = true;
+                cafe.Play();
+                particles.SetActive(true);
+                ObjectifManager.Instance.setObjectif("coffee");
+            }
         }
-        else
+    }
+
+    IEnumerator waitForEndOfSound()
+    {
+        while (cafe.isPlaying)
         {
-            //Play sound error
+            yield return null;
         }
+
+        toActivateAtEnd.enabled = true;
     }
 }
