@@ -5,13 +5,16 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
+    /*
     public Animation anim;
     public AnimationClip openDoorElevator;
     public AnimationClip ClosenDoorElevator;
+    */
 
     private bool m_isLevelButtonPressed = false;
     private bool m_isDoorOpen = false;
 
+    /*
     public void ButtonPressed(string button)
     {
         switch (button)
@@ -37,7 +40,9 @@ public class Menu : MonoBehaviour
                 return;
         }
     }
+    */
 
+    /*
     private void AnimationDoor()
     {
         if (!m_isDoorOpen)
@@ -55,6 +60,7 @@ public class Menu : MonoBehaviour
             anim.Play();
         }
     }
+    */
 
 }
 

@@ -121,6 +121,24 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &174086022 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2846606543128051855, guid: fb1311770f751456ba1c8d5a23dfe046,
+    type: 3}
+  m_PrefabInstance: {fileID: 2846606543146696900}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &174086023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 174086022}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: da22ba53939f94655a9f2a0b4ba6f215, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &237853656 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5004226393778458035, guid: 0d06c5c1d6f352d4090694fffc8fd5c7,
@@ -212,14 +230,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 278296342, guid: fb1311770f751456ba1c8d5a23dfe046, type: 3}
-      propertyPath: m_Value
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 571411131, guid: fb1311770f751456ba1c8d5a23dfe046, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 571411131, guid: fb1311770f751456ba1c8d5a23dfe046, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -288,6 +298,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2846606543146696903, guid: fb1311770f751456ba1c8d5a23dfe046,
+        type: 3}
+      propertyPath: openDoorElevatorAnimation
+      value: 
+      objectReference: {fileID: 7400000, guid: c2bf764810a984d03929686eb70e64a5, type: 2}
+    - target: {fileID: 2846606543146696903, guid: fb1311770f751456ba1c8d5a23dfe046,
+        type: 3}
+      propertyPath: ClosenDoorElevatorAnimation
+      value: 
+      objectReference: {fileID: 7400000, guid: 6ff13ae79682541a485615b9a076c38f, type: 2}
+    - target: {fileID: 2846606543146696903, guid: fb1311770f751456ba1c8d5a23dfe046,
+        type: 3}
+      propertyPath: m_sceneControler
+      value: 
+      objectReference: {fileID: 174086023}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fb1311770f751456ba1c8d5a23dfe046, type: 3}
 --- !u!1001 &3663536006916145823
