@@ -6,7 +6,8 @@ public class CoffeeMachine : MonoBehaviour
 {
     private bool cupIsPresent = false;
     private bool buttonHasBeenPressed = false;
-    private AudioSource cafe;
+    [SerializeField] private AudioSource cafe;
+    [SerializeField] private AudioClip cafeClip;
     [SerializeField] private GameObject particles;
     [SerializeField] private OVRGrabber toActivateAtEnd;
 
@@ -28,8 +29,9 @@ public class CoffeeMachine : MonoBehaviour
         {
             if(!buttonHasBeenPressed)
             {
+                Debug.Log("OK");
                 buttonHasBeenPressed = true;
-                cafe.Play();
+                cafe.PlayOneShot(cafeClip);
                 StartCoroutine(waitForEndOfSound());
                 
             }
@@ -43,7 +45,7 @@ public class CoffeeMachine : MonoBehaviour
             yield return null;
         }
 
-        toActivateAtEnd.enabled = true;
+        //toActivateAtEnd.enabled = true;
         particles.SetActive(true);
         ObjectifManager.Instance.setObjectif("coffee");
     }

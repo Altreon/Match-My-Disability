@@ -58,6 +58,7 @@ public class PropsHolder : MonoBehaviour
         propsPlaced.Invoke(accepted);
         this.accepted = accepted;
         //On tente le snap
+        /*
         if(accepted){
             target.position = transform.position;
             target.rotation = transform.rotation;
@@ -69,6 +70,7 @@ public class PropsHolder : MonoBehaviour
         //{
             //toDeactivate.enabled = true;
         //}
+        */
     }
 
     void blinkUpdate () {
