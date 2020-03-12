@@ -5,10 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class Menu : MonoBehaviour
 {
+    public Animation anim;
+    public AnimationClip openDoorElevator;
+    public AnimationClip ClosenDoorElevator;
+
     private bool m_isLevelButtonPressed = false;
     private bool m_isDoorOpen = false;
-    private bool m_isQuit;
-    //private bool m_isPressed = false;
 
     public void ButtonPressed(string button)
     {
@@ -16,9 +18,11 @@ public class Menu : MonoBehaviour
         {
             case "levelOneButton":
                 if (m_isLevelButtonPressed) return;
+                AnimationDoor();
                 Debug.Log("sceneName to load: 'LevelOne'");
                 m_isLevelButtonPressed = true;
                 SceneManager.LoadScene("LevelOne");
+                AnimationDoor();
                 return;
             case "levelTwoButton":
                 if (m_isLevelButtonPressed) return;
@@ -40,11 +44,15 @@ public class Menu : MonoBehaviour
         {
             Debug.Log("Door will open");
             m_isDoorOpen = true;
+            anim.clip = openDoorElevator;
+            anim.Play();
         }
         else
         {
             Debug.Log("Door will close");
             m_isDoorOpen = false;
+            anim.clip = ClosenDoorElevator;
+            anim.Play();
         }
     }
 
