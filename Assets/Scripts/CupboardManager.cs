@@ -8,7 +8,7 @@ public class CupboardManager : MonoBehaviour
     [SerializeField]
     private float MaxOpen = -6.1f;
     [SerializeField]
-    public float Close = -6.468383f;
+    public float Close = -6.468383f;   
     [SerializeField]
     private Transform door1;
 
@@ -54,14 +54,19 @@ public class CupboardManager : MonoBehaviour
             door1.transform.position = var;
         }
 
+        door1.transform.eulerAngles = new Vector3(0,90,0);
+
+
         //Door 2
+        door2.transform.position = new Vector3(-6.235841f,-0.3869242f,-4.76642f);
         var rot2 = door2.transform.eulerAngles;
         rot2.y = Mathf.Clamp(rot2.y, MinAngle2, MaxAngle2);
-        door2.transform.eulerAngles = rot2;
+        door2.transform.eulerAngles = new Vector3(0,rot2.y,0);
 
         // Door 3
+        door3.transform.position = new Vector3(-6.235841f,-0.3869241f,-3.78642f);
         var rot3 = door3.transform.eulerAngles;
         rot3.y = Mathf.Clamp(rot3.y, MinAngle3, MaxAngle3);
-        door3.transform.eulerAngles = rot3;
+        door3.transform.eulerAngles = new Vector3(0,rot3.y,0);
     }
 }
