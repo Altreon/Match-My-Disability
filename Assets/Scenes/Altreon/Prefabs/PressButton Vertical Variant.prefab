@@ -11,6 +11,14 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 118
       objectReference: {fileID: 0}
+    - target: {fileID: 682510341, guid: d456d7b940a05db499784d8d74fb0f08, type: 3}
+      propertyPath: axisConstraint
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 682510341, guid: d456d7b940a05db499784d8d74fb0f08, type: 3}
+      propertyPath: invert
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 874512317078290152, guid: d456d7b940a05db499784d8d74fb0f08,
         type: 3}
       propertyPath: m_Constraints
