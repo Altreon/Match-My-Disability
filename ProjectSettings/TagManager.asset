@@ -3,8 +3,7 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags:
-  - Button
+  tags: []
   layers:
   - Default
   - TransparentFX
@@ -21,7 +20,7 @@ TagManager:
   - Button
   - ButtonLimit
   - Hand
-  - 
+  - Cupboard
   - 
   - 
   - 
