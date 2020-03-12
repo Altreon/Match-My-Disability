@@ -4,9 +4,13 @@ using UnityEngine;
 
 public class ButtonPosKeeper : MonoBehaviour
 {
+	public enum Axis {X, Y, Z};
+	
     public Transform buttonLimit;
     public Transform downButton;
     public float supOffset = 0.03f;
+	
+	public Axis axisConstraint = Axis.X;
 
     float normalDist;
     Vector3 originalPos;
@@ -44,7 +48,11 @@ public class ButtonPosKeeper : MonoBehaviour
 
          //if (collision.gameObject.tag == "Hand") {
              Debug.Log("UnFreeze");
-             rb.constraints &= ~RigidbodyConstraints.FreezePositionY; 
+			 switch (axisConstraint) {
+				case Axis.X : rb.constraints &= ~RigidbodyConstraints.FreezePositionX; break;
+				case Axis.Y : rb.constraints &= ~RigidbodyConstraints.FreezePositionY; break;
+				case Axis.Z : rb.constraints &= ~RigidbodyConstraints.FreezePositionZ; break;
+			 }
          //}
      }
 }
