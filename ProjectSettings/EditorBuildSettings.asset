@@ -6,6 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+<<<<<<< HEAD
     path: Assets/Scenes/Elfo/StartScene.unity
     guid: 51fdc72cd74719e40a8a82b899773099
   - enabled: 0
@@ -14,4 +15,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Altreon/SampleScene.unity
     guid: ff8447ee1a73cd74eb79e4ca245a2a8d
+=======
+    path: Assets/Scenes/Airforce/MaScene.unity
+    guid: 62d8cbf2596cae94ab44ec9aabb13e41
+>>>>>>> c39c929ce582fec3e8a7814e17b5ef8df39b0489
   m_configObjects: {}
