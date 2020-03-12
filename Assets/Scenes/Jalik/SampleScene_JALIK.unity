@@ -318,7 +318,8 @@ AudioSource:
   m_GameObject: {fileID: 31193983}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300001, guid: 1dd706bb85d8aef4e83a6229dbd62c36,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: ddcc5d3562f3cc141ba36d27e45c5219, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
@@ -405,6 +406,26 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &31193989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 31193983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e503ea6418d27594caa33b93cac1b06a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enableSpatialization: 1
+  gain: 8
+  useInvSqr: 0
+  near: 1
+  far: 1000
+  volumetricRadius: 0
+  reverbSend: 0
+  enableRfl: 1
 --- !u!1 &35488854
 GameObject:
   m_ObjectHideFlags: 0
@@ -1057,6 +1078,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1545919384}
+  grabber: {fileID: 0}
   distanceAccept: 0.26
   blink: 1
   blinkFadeIntensity: 0.5
@@ -8284,7 +8306,6 @@ GameObject:
   - component: {fileID: 1213914112}
   - component: {fileID: 1213914115}
   - component: {fileID: 1213914114}
-  - component: {fileID: 1213914113}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -8306,20 +8327,6 @@ Transform:
   m_Father: {fileID: 2057337150}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!136 &1213914113
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1213914111}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!23 &1213914114
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8517,6 +8524,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 7598417720237949684}
+  grabber: {fileID: 0}
   distanceAccept: 0.26
   blink: 1
   blinkFadeIntensity: 0.5
