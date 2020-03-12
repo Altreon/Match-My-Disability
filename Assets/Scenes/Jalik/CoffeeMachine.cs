@@ -23,14 +23,15 @@ public class CoffeeMachine : MonoBehaviour
 
     public void ButtonPressed()
     {
+        Debug.Log("pressed");
         if (cupIsPresent)
         {
             if(!buttonHasBeenPressed)
             {
                 buttonHasBeenPressed = true;
                 cafe.Play();
-                particles.SetActive(true);
-                ObjectifManager.Instance.setObjectif("coffee");
+                StartCoroutine(waitForEndOfSound());
+                
             }
         }
     }
@@ -43,5 +44,7 @@ public class CoffeeMachine : MonoBehaviour
         }
 
         toActivateAtEnd.enabled = true;
+        particles.SetActive(true);
+        ObjectifManager.Instance.setObjectif("coffee");
     }
 }

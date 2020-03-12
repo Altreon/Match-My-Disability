@@ -153,10 +153,15 @@ PrefabInstance:
       propertyPath: upButton
       value: 
       objectReference: {fileID: 31193987}
+    - target: {fileID: 5990912498793377613, guid: dfbed72cff4c3da438962d85117c8ce9,
+        type: 3}
+      propertyPath: invert
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6845783131500773568, guid: dfbed72cff4c3da438962d85117c8ce9,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 18.1476
+      value: 18.1961
       objectReference: {fileID: 0}
     - target: {fileID: 6845783131500773568, guid: dfbed72cff4c3da438962d85117c8ce9,
         type: 3}
@@ -1085,7 +1090,18 @@ MonoBehaviour:
   blinkFadeTime: 1
   propsPlaced:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 31193984}
+        m_MethodName: SetCupIsPresent
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!23 &446748981
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1764,6 +1780,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 611761710}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &637387712 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7430227309321649222, guid: d23ca91b74582904092b410d86b95fa8,
+    type: 3}
+  m_PrefabInstance: {fileID: 7660408658095830156}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 714f74af458c7ac429b3d188eb0da325, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &658875160
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8531,7 +8559,18 @@ MonoBehaviour:
   blinkFadeTime: 1
   propsPlaced:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 637387712}
+        m_MethodName: setObjectif
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: note
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1302840969
 GameObject:
   m_ObjectHideFlags: 0
@@ -10800,6 +10839,20 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300000, guid: f437f56c4d9ddd94cad9e292b78601d3, type: 3}
+--- !u!1 &2127996080 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7660408659825510267, guid: d23ca91b74582904092b410d86b95fa8,
+    type: 3}
+  m_PrefabInstance: {fileID: 7660408658095830156}
+  m_PrefabAsset: {fileID: 0}
+--- !u!81 &2127996086
+AudioListener:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2127996080}
+  m_Enabled: 1
 --- !u!33 &204185743978073284
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -13199,7 +13252,7 @@ PrefabInstance:
     - target: {fileID: 7660408658145726452, guid: d23ca91b74582904092b410d86b95fa8,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.18
+      value: -8.879
       objectReference: {fileID: 0}
     - target: {fileID: 7660408658145726452, guid: d23ca91b74582904092b410d86b95fa8,
         type: 3}
@@ -13209,7 +13262,7 @@ PrefabInstance:
     - target: {fileID: 7660408658145726452, guid: d23ca91b74582904092b410d86b95fa8,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -9.977
+      value: -2.057
       objectReference: {fileID: 0}
     - target: {fileID: 7660408658145726452, guid: d23ca91b74582904092b410d86b95fa8,
         type: 3}
