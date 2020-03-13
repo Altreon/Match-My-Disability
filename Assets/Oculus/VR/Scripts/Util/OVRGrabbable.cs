@@ -174,13 +174,6 @@ public class OVRGrabbable : MonoBehaviour
     }
 	
 	//MODIFICATION
-    public void SetHightLightTriggerGrab()
-    {
-		m_mpb.SetColor("_OutlineColor", hightLightTriggerColor);
-		m_renderer.SetPropertyBlock(m_mpb);
-    }
-	
-	//MODIFICATION
     public void SetHightLightTrigger()
     {
 		m_mpb.SetColor("_OutlineColor", hightLightTriggerColor);
@@ -197,7 +190,7 @@ public class OVRGrabbable : MonoBehaviour
     //MODIFICATION
     public void ClearHightLight()
     {
-        m_mpb.SetColor("_OutlineColor", Color.clear);
+        m_mpb.SetColor("_OutlineColor", hightLightDefaultColorColor);
         m_renderer.SetPropertyBlock(m_mpb);
     }
 
