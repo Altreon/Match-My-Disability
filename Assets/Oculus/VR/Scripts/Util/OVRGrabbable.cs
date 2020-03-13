@@ -190,7 +190,7 @@ public class OVRGrabbable : MonoBehaviour
     //MODIFICATION
     public void ClearHightLight()
     {
-        m_mpb.SetColor("_OutlineColor", hightLightDefaultColorColor);
+        m_mpb.SetColor("_OutlineColor", hightLightDefaultColor);
         m_renderer.SetPropertyBlock(m_mpb);
     }
 
