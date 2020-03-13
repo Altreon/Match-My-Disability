@@ -5,9 +5,9 @@ using UnityEngine;
 public class LinearDrive : MonoBehaviour
 {
     [SerializeField] 
-    private float close = -6.106537f;
+    private float close = -10.2f;
     [SerializeField] 
-    private float open = -5.65f;
+    private float open = -9.739f;
     private Vector3 lastPos;    
     [SerializeField]
     Transform door;

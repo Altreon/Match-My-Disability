@@ -10,6 +10,9 @@ public class UnityEventBool : UnityEvent<bool>
 public class PropsHolder : MonoBehaviour
 {
     public Transform target;
+    private OVRGrabbable toDeactivate;
+    private Rigidbody toVelocityZero;
+    [SerializeField] private OVRGrabber grabber;
     public float distanceAccept;
     public bool blink = true;
     [Range(0,1)]
@@ -28,6 +31,8 @@ public class PropsHolder : MonoBehaviour
     {
         rend = GetComponent<Renderer>();
         rendColor = rend.material.color;
+        toDeactivate = target.gameObject.GetComponent<OVRGrabbable>();
+        
     }
 
     void Update()
@@ -52,6 +57,20 @@ public class PropsHolder : MonoBehaviour
         rend.enabled = !accepted;
         propsPlaced.Invoke(accepted);
         this.accepted = accepted;
+        //On tente le snap
+        /*
+        if(accepted){
+            target.position = transform.position;
+            target.rotation = transform.rotation;
+            toVelocityZero.velocity = Vector3.zero;
+            //grabber.GrabEnd();
+            toDeactivate.enabled = false;
+        }
+        //else
+        //{
+            //toDeactivate.enabled = true;
+        //}
+        */
     }
 
     void blinkUpdate () {

@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/Airforce/MaScene.unity
-    guid: 62d8cbf2596cae94ab44ec9aabb13e41
+    path: Assets/Scenes/Jalik/StartScene_copie_de_elfo.unity
+    guid: 2489a07fa4232b04bb5ead58b7ae5d90
+  - enabled: 1
+    path: Assets/Scenes/Jalik/SampleScene_JALIK.unity
+    guid: 453064712c6dcc44bbff90cf9dd76aed
   m_configObjects: {}

@@ -18,6 +18,7 @@ public class ButtonPosKeeper : MonoBehaviour
 
     //float normalDist;
     //Vector3 originalPos;
+	PressButton button;
     Rigidbody rb;
     bool locked = false;
     // Start is called before the first frame update
@@ -26,6 +27,7 @@ public class ButtonPosKeeper : MonoBehaviour
         /*normalDist = Vector3.Distance(buttonLimit.position, downButton.position);
         originalPos = transform.position;*/
 
+		button = transform.parent.GetComponent<PressButton>();
         rb = GetComponent<Rigidbody>();
     }
 
@@ -58,6 +60,27 @@ public class ButtonPosKeeper : MonoBehaviour
 			 }
          }
     }*/
+
+	void Update() {
+		float distance;
+		switch (axisConstraint) {
+			case Axis.X :
+				distance = downButton.position.x - buttonLimit.position.x;
+				if(invert) {distance *= -1;}
+				if(distance < 0) {button.click();}
+				break;
+			case Axis.Y : 
+				distance = downButton.position.y - buttonLimit.position.y;
+				if(invert) {distance *= -1;}
+				if(distance < 0) {button.click();}
+				break;
+			case Axis.Z : 
+				distance = downButton.position.z - buttonLimit.position.z;
+				if(invert) {distance *= -1;}
+				if(distance < 0) {button.click();}
+				break;
+		}
+	}
 	
 	void FixedUpdate () {
 		float distanceUp;
