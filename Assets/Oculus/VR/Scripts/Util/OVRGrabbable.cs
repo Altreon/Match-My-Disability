@@ -16,6 +16,7 @@ permissions and limitations under the License.
 
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 /// <summary>
 /// An object that can be grabbed and thrown by OVRGrabber.
@@ -32,13 +33,18 @@ public class OVRGrabbable : MonoBehaviour
     protected Transform m_snapOffset;
     [SerializeField]
     protected Collider[] m_grabPoints = null;
+	
+	public UnityEvent grab;
+	public UnityEvent drop;
 
     protected bool m_grabbedKinematic = false;
     protected Collider m_grabbedCollider = null;
     protected OVRGrabber m_grabbedBy = null;
 
     //MODIFICATION
-    public Color hightLightColor;
+    public Color hightLightDefaultColor;
+	public Color hightLightTriggerColor;
+	public Color hightLightGrabColor;
     Renderer m_renderer;
     MaterialPropertyBlock m_mpb;
 
@@ -122,6 +128,8 @@ public class OVRGrabbable : MonoBehaviour
         m_grabbedBy = hand;
         m_grabbedCollider = grabPoint;
         gameObject.GetComponent<Rigidbody>().isKinematic = true;
+		
+		grab.Invoke();
     }
 
 	/// <summary>
@@ -135,6 +143,8 @@ public class OVRGrabbable : MonoBehaviour
         rb.angularVelocity = angularVelocity;
         m_grabbedBy = null;
         m_grabbedCollider = null;
+		
+		drop.Invoke();
     }
 
     void Awake()
@@ -161,15 +171,28 @@ public class OVRGrabbable : MonoBehaviour
         m_renderer = gameObject.GetComponent<Renderer>();
         m_mpb = new MaterialPropertyBlock();
         ClearHightLight();
-        m_renderer.SetPropertyBlock(m_mpb);
+    }
+	
+	//MODIFICATION
+    public void SetHightLightTriggerGrab()
+    {
+		m_mpb.SetColor("_OutlineColor", hightLightTriggerColor);
+		m_renderer.SetPropertyBlock(m_mpb);
+    }
+	
+	//MODIFICATION
+    public void SetHightLightTrigger()
+    {
+		m_mpb.SetColor("_OutlineColor", hightLightTriggerColor);
+		m_renderer.SetPropertyBlock(m_mpb);
     }
 
     //MODIFICATION
-    public void SetHightLight()
-        {
-            m_mpb.SetColor("_OutlineColor", hightLightColor);
-            m_renderer.SetPropertyBlock(m_mpb);
-        }
+    public void SetHightLightGrab(Color color)
+    {
+		m_mpb.SetColor("_OutlineColor", hightLightGrabColor);
+		m_renderer.SetPropertyBlock(m_mpb);
+    }
 
     //MODIFICATION
     public void ClearHightLight()

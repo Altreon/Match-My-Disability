@@ -255,7 +255,7 @@ public class OVRGrabber : MonoBehaviour
         }
 
         if(closestGrabbable){
-            closestGrabbable.SetHightLight();
+            closestGrabbable.SetHightLightTrigger();
         }
     }
 
@@ -364,6 +364,8 @@ public class OVRGrabber : MonoBehaviour
                     m_grabbedObjectRotOff = Quaternion.Inverse(m_grabbedObj.snapOffset.localRotation);
 					if (m_controller == OVRInput.Controller.LTouch)
 						m_grabbedObjectRotOff = m_grabbedObj.snapOffset.localRotation;
+						m_grabbedObjectRotOff *= Quaternion.Euler(Vector3.up * 90);
+						m_grabbedObjectRotOff *= Quaternion.Euler(Vector3.forward * -90);
                 }else{
                     m_grabbedObjectRotOff = Quaternion.identity;
                 }
