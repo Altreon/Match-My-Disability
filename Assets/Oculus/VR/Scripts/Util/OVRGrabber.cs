@@ -341,7 +341,7 @@ public class OVRGrabber : MonoBehaviour
 					
 					/*snapOffset = Quaternion.AngleAxis(90, Vector3.up) * snapOffset;
 					snapOffset = Quaternion.AngleAxis(-90, Vector3.forward) * snapOffset;*/
-					if (m_controller == OVRInput.Controller.LTouch) snapOffset.x = -snapOffset.x;
+					//if (m_controller == OVRInput.Controller.LTouch) snapOffset.x = -snapOffset.x;
                     m_grabbedObjectPosOff = snapOffset;
                 }else{
                     m_grabbedObjectPosOff = Vector3.zero;
@@ -362,6 +362,8 @@ public class OVRGrabber : MonoBehaviour
                 {
                     //m_grabbedObjectRotOff = m_grabbedObj.snapOffset.rotation * m_grabbedObjectRotOff;
                     m_grabbedObjectRotOff = Quaternion.Inverse(m_grabbedObj.snapOffset.localRotation);
+					if (m_controller == OVRInput.Controller.LTouch)
+						m_grabbedObjectRotOff = m_grabbedObj.snapOffset.localRotation;
                 }else{
                     m_grabbedObjectRotOff = Quaternion.identity;
                 }
