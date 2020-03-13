@@ -281,6 +281,11 @@ PrefabInstance:
       propertyPath: invert
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5990912498793377613, guid: dfbed72cff4c3da438962d85117c8ce9,
+        type: 3}
+      propertyPath: supOffset
+      value: 0.005
+      objectReference: {fileID: 0}
     - target: {fileID: 6845783131500773568, guid: dfbed72cff4c3da438962d85117c8ce9,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -425,6 +430,11 @@ PrefabInstance:
         type: 3}
       propertyPath: invert
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5990912498793377613, guid: dfbed72cff4c3da438962d85117c8ce9,
+        type: 3}
+      propertyPath: supOffset
+      value: 0.005
       objectReference: {fileID: 0}
     - target: {fileID: 6845783131500773568, guid: dfbed72cff4c3da438962d85117c8ce9,
         type: 3}

@@ -18,9 +18,11 @@ public class WheelchairController : MonoBehaviour
     
     void Start()
     {
+        /*
         Rigidbody rb = gameObject.GetComponent<Rigidbody>();
         if (rb != null)
             rb.constraints = RigidbodyConstraints.FreezeAll;
+        */
     }
 
     // Update is called once per frame
