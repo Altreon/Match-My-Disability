@@ -22104,7 +22104,7 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  hightLightColor: {r: 0, g: 0, b: 0, a: 0}
+  hightLightColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!33 &7598417720239222096
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -22131,7 +22131,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 0fa29dbb24d023c4f815d0a00e41584a, type: 2}
+  - {fileID: 2100000, guid: 1bdd82ac0274078449b32cd18d9d078c, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

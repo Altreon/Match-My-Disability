@@ -17,7 +17,7 @@ public class PressButton : MonoBehaviour
 		Debug.Log("button click");
         if(!audio.isPlaying){
 			audio.Play();
+			clickEvent.Invoke();
 		}
-        clickEvent.Invoke();
     }
 }
