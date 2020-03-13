@@ -566,6 +566,7 @@ MonoBehaviour:
   buttonLimit: {fileID: 874512317554884081}
   downButton: {fileID: 1513606803}
   upButton: {fileID: 180517855}
+  supOffset: 0.05
   downLimit: {fileID: 1288427461}
   upLimit: {fileID: 1500055326}
   axisConstraint: 1
