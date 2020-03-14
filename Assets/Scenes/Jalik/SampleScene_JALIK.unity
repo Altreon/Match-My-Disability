@@ -9490,6 +9490,21 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 1bdd82ac0274078449b32cd18d9d078c, type: 2}
+    - target: {fileID: 460780227882806449, guid: 6393ae1c656c0964f90e1e7a3f769860,
+        type: 3}
+      propertyPath: drop.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 460780227882806449, guid: 6393ae1c656c0964f90e1e7a3f769860,
+        type: 3}
+      propertyPath: drop.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 460780227882806449, guid: 6393ae1c656c0964f90e1e7a3f769860,
+        type: 3}
+      propertyPath: drop.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 460780227882806450, guid: 6393ae1c656c0964f90e1e7a3f769860,
         type: 3}
       propertyPath: m_Name
@@ -11396,7 +11411,15 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  hightLightColor: {r: 0, g: 0, b: 0, a: 0}
+  grab:
+    m_PersistentCalls:
+      m_Calls: []
+  drop:
+    m_PersistentCalls:
+      m_Calls: []
+  hightLightDefaultColor: {r: 0, g: 0, b: 0, a: 0}
+  hightLightTriggerColor: {r: 0, g: 0, b: 0, a: 0}
+  hightLightGrabColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &1066891408958242195
 Transform:
   m_ObjectHideFlags: 0
@@ -11812,7 +11835,15 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  hightLightColor: {r: 0, g: 0, b: 0, a: 0}
+  grab:
+    m_PersistentCalls:
+      m_Calls: []
+  drop:
+    m_PersistentCalls:
+      m_Calls: []
+  hightLightDefaultColor: {r: 0, g: 0, b: 0, a: 0}
+  hightLightTriggerColor: {r: 0, g: 0, b: 0, a: 0}
+  hightLightGrabColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!23 &2058078787151450863
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11953,7 +11984,15 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  hightLightColor: {r: 0, g: 0, b: 0, a: 0}
+  grab:
+    m_PersistentCalls:
+      m_Calls: []
+  drop:
+    m_PersistentCalls:
+      m_Calls: []
+  hightLightDefaultColor: {r: 0, g: 0, b: 0, a: 0}
+  hightLightTriggerColor: {r: 0, g: 0, b: 0, a: 0}
+  hightLightGrabColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!54 &2222952040776773510
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -12235,7 +12274,15 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  hightLightColor: {r: 0, g: 0, b: 0, a: 0}
+  grab:
+    m_PersistentCalls:
+      m_Calls: []
+  drop:
+    m_PersistentCalls:
+      m_Calls: []
+  hightLightDefaultColor: {r: 0, g: 0, b: 0, a: 0}
+  hightLightTriggerColor: {r: 0, g: 0, b: 0, a: 0}
+  hightLightGrabColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1 &2868513062494911528
 GameObject:
   m_ObjectHideFlags: 0
@@ -12807,7 +12854,15 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  hightLightColor: {r: 0, g: 0, b: 0, a: 0}
+  grab:
+    m_PersistentCalls:
+      m_Calls: []
+  drop:
+    m_PersistentCalls:
+      m_Calls: []
+  hightLightDefaultColor: {r: 0, g: 0, b: 0, a: 0}
+  hightLightTriggerColor: {r: 0, g: 0, b: 0, a: 0}
+  hightLightGrabColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &5148553590116461559
 Transform:
   m_ObjectHideFlags: 0
@@ -12990,7 +13045,15 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  hightLightColor: {r: 0, g: 0, b: 0, a: 0}
+  grab:
+    m_PersistentCalls:
+      m_Calls: []
+  drop:
+    m_PersistentCalls:
+      m_Calls: []
+  hightLightDefaultColor: {r: 0, g: 0, b: 0, a: 0}
+  hightLightTriggerColor: {r: 0, g: 0, b: 0, a: 0}
+  hightLightGrabColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &6071858603623019406
 Transform:
   m_ObjectHideFlags: 0
@@ -13437,7 +13500,15 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  hightLightColor: {r: 0, g: 0, b: 0, a: 0}
+  grab:
+    m_PersistentCalls:
+      m_Calls: []
+  drop:
+    m_PersistentCalls:
+      m_Calls: []
+  hightLightDefaultColor: {r: 0, g: 0, b: 0, a: 0}
+  hightLightTriggerColor: {r: 0, g: 0, b: 0, a: 0}
+  hightLightGrabColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!54 &7030375923813676828
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -13669,7 +13740,15 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  hightLightColor: {r: 0, g: 0, b: 0, a: 0}
+  grab:
+    m_PersistentCalls:
+      m_Calls: []
+  drop:
+    m_PersistentCalls:
+      m_Calls: []
+  hightLightDefaultColor: {r: 0, g: 0, b: 0, a: 0}
+  hightLightTriggerColor: {r: 0, g: 0, b: 0, a: 0}
+  hightLightGrabColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &7278555872780864312
 Transform:
   m_ObjectHideFlags: 0
@@ -13766,7 +13845,15 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  hightLightColor: {r: 1, g: 0, b: 0, a: 1}
+  grab:
+    m_PersistentCalls:
+      m_Calls: []
+  drop:
+    m_PersistentCalls:
+      m_Calls: []
+  hightLightDefaultColor: {r: 0, g: 0, b: 0, a: 0}
+  hightLightTriggerColor: {r: 0, g: 0, b: 0, a: 0}
+  hightLightGrabColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!33 &7598417720239222096
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -14087,7 +14174,15 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  hightLightColor: {r: 0, g: 0, b: 0, a: 0}
+  grab:
+    m_PersistentCalls:
+      m_Calls: []
+  drop:
+    m_PersistentCalls:
+      m_Calls: []
+  hightLightDefaultColor: {r: 0, g: 0, b: 0, a: 0}
+  hightLightTriggerColor: {r: 0, g: 0, b: 0, a: 0}
+  hightLightGrabColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &8299975205242867954
 Transform:
   m_ObjectHideFlags: 0
@@ -14264,7 +14359,15 @@ MonoBehaviour:
   m_snapOrientation: 0
   m_snapOffset: {fileID: 0}
   m_grabPoints: []
-  hightLightColor: {r: 0, g: 0, b: 0, a: 0}
+  grab:
+    m_PersistentCalls:
+      m_Calls: []
+  drop:
+    m_PersistentCalls:
+      m_Calls: []
+  hightLightDefaultColor: {r: 0, g: 0, b: 0, a: 0}
+  hightLightTriggerColor: {r: 0, g: 0, b: 0, a: 0}
+  hightLightGrabColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!4 &8400513884895550764
 Transform:
   m_ObjectHideFlags: 0
