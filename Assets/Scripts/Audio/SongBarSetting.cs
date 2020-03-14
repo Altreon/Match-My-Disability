@@ -16,7 +16,8 @@ public class SongBarSetting : MonoBehaviour
     private void Start()
     {
         m_deltat = 100.0f / (float)m_songScale;
-        m_volume = 100f;
+        m_volume = (float)m_songScale / 2.0f * m_deltat;
+        m_songSlider.value = m_volume / 100f;
         //Debug.Log("m_deltat = " + m_deltat);
     }
 
