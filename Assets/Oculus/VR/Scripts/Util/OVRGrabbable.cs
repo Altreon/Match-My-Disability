@@ -208,6 +208,8 @@ public class OVRGrabbable : MonoBehaviour
     {
 		m_mpb.SetColor("_OutlineColor", hightLightTriggerColor);
 		m_renderer.SetPropertyBlock(m_mpb);
+
+        blink = Blink.Stop;
     }
 
     //MODIFICATION
@@ -215,6 +217,8 @@ public class OVRGrabbable : MonoBehaviour
     {
 		m_mpb.SetColor("_OutlineColor", hightLightGrabColor);
 		m_renderer.SetPropertyBlock(m_mpb);
+
+        blink = Blink.Stop;
     }
 
     //MODIFICATION
@@ -222,6 +226,8 @@ public class OVRGrabbable : MonoBehaviour
     {
         m_mpb.SetColor("_OutlineColor", hightLightDefaultColor);
         m_renderer.SetPropertyBlock(m_mpb);
+
+        blink = Blink.FadeIn;
     }
 
     void OnDestroy()
