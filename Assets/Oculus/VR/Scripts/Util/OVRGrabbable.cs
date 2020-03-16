@@ -193,7 +193,6 @@ public class OVRGrabbable : MonoBehaviour
                 alpha = 1 - alpha;
             }
             Color blinkColor = hightLightDefaultColor;
-            Debug.Log(alpha);
             blinkColor.a = alpha;
 
             m_mpb.SetColor("_OutlineColor", blinkColor);

@@ -15,6 +15,7 @@ GameObject:
   - component: {fileID: 4044105921667851376}
   - component: {fileID: 4044105921667851378}
   - component: {fileID: 4044105921667851381}
+  - component: {fileID: 7247902937672391887}
   m_Layer: 9
   m_Name: CoffeeCup
   m_TagString: Untagged
@@ -141,6 +142,7 @@ MonoBehaviour:
   hightLightDefaultColor: {r: 0, g: 0.5019608, b: 1, a: 1}
   hightLightTriggerColor: {r: 0.09803922, g: 0.09803922, b: 0.4392157, a: 1}
   hightLightGrabColor: {r: 0.29803923, g: 0.73333335, b: 0.09019608, a: 1}
+  blickTime: 1
 --- !u!114 &4044105921667851381
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -156,6 +158,21 @@ MonoBehaviour:
   m_allowPointing: 0
   m_allowThumbsUp: 0
   m_poseId: 4
+--- !u!114 &7247902937672391887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4044105921667851377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64595e235ed88194a922ab0021e5f662, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  heightLimit: -0.5
+  resetSpeed: 10
+  acceptDistance: 0.01
 --- !u!1 &5515522191822363019
 GameObject:
   m_ObjectHideFlags: 0
