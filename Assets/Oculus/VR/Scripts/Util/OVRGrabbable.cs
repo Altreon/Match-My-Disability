@@ -181,7 +181,7 @@ public class OVRGrabbable : MonoBehaviour
     }
 
     //MODIFICATION
-    public void SetHightLightGrab(Color color)
+    public void SetHightLightGrab()
     {
 		m_mpb.SetColor("_OutlineColor", hightLightGrabColor);
 		m_renderer.SetPropertyBlock(m_mpb);

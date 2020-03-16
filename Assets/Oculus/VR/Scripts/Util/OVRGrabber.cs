@@ -254,7 +254,7 @@ public class OVRGrabber : MonoBehaviour
             }
         }
 
-        if(closestGrabbable){
+        if(closestGrabbable && closestGrabbable != m_grabbedObj){
             closestGrabbable.SetHightLightTrigger();
         }
     }
@@ -387,7 +387,7 @@ public class OVRGrabber : MonoBehaviour
             }
 
             //MODIFICATION
-            closestGrabbable.ClearHightLight();
+            closestGrabbable.SetHightLightGrab();
         }
     }
 
@@ -418,6 +418,8 @@ public class OVRGrabber : MonoBehaviour
     {
         if (m_grabbedObj != null)
         {
+            m_grabbedObj.ClearHightLight();
+
 			OVRPose localPose = new OVRPose { position = OVRInput.GetLocalControllerPosition(m_controller), orientation = OVRInput.GetLocalControllerRotation(m_controller) };
             OVRPose offsetPose = new OVRPose { position = m_anchorOffsetPosition, orientation = m_anchorOffsetRotation };
             localPose = localPose * offsetPose;
