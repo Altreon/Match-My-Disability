@@ -47,6 +47,12 @@ public class OVRGrabbable : MonoBehaviour
 	public Color hightLightGrabColor;
     Renderer m_renderer;
     MaterialPropertyBlock m_mpb;
+    
+    //MODIFICATION
+    public float blickTime = 1f;
+    enum Blink {Stop, FadeIn, FadeOut};
+    Blink blink = Blink.FadeIn;
+    float lastBlinkAlpha = 0f;
 
 	/// <summary>
 	/// If true, the object can currently be grabbed.
@@ -171,6 +177,30 @@ public class OVRGrabbable : MonoBehaviour
         m_renderer = gameObject.GetComponent<Renderer>();
         m_mpb = new MaterialPropertyBlock();
         ClearHightLight();
+    }
+
+    void Update () {
+        if(blink != Blink.Stop){
+            float alpha = Time.time % blickTime;
+
+            if(blink == Blink.FadeIn && alpha < lastBlinkAlpha){
+                blink = Blink.FadeOut;
+            }else if(blink == Blink.FadeOut && 1 - alpha > lastBlinkAlpha){
+                blink = Blink.FadeIn;
+            }
+
+            if(blink == Blink.FadeOut){
+                alpha = 1 - alpha;
+            }
+            Color blinkColor = hightLightDefaultColor;
+            Debug.Log(alpha);
+            blinkColor.a = alpha;
+
+            m_mpb.SetColor("_OutlineColor", blinkColor);
+		    m_renderer.SetPropertyBlock(m_mpb);
+
+            lastBlinkAlpha = alpha;
+        }
     }
 	
 	//MODIFICATION
