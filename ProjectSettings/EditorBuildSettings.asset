@@ -11,7 +11,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Jalik/StartScene_copie_de_elfo.unity
     guid: 2489a07fa4232b04bb5ead58b7ae5d90
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Jalik/SampleScene_JALIK.unity
     guid: 453064712c6dcc44bbff90cf9dd76aed
+  - enabled: 1
+    path: Assets/Scenes/Altreon/SampleScene_copie-JALIK.unity
+    guid: 4515010e879bf3241928330d071c0473
   m_configObjects: {}

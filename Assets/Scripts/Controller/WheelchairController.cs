@@ -35,19 +35,23 @@ public class WheelchairController : MonoBehaviour
         {
             //Déplacement vertical
             if(axis.y > 0f)
-                transform.Translate(forwardVector * forwardSpeed * Time.deltaTime);
+                //transform.Translate(forwardVector * forwardSpeed * Time.deltaTime);
+                transform.position = Vector3.Lerp(transform.position, transform.position + transform.forward, forwardSpeed * Time.deltaTime);
             else
-                transform.Translate(backwardVector *  backwardSpeed * Time.deltaTime);
+                //transform.Translate(backwardVector *  backwardSpeed * Time.deltaTime);
+                transform.position = Vector3.Lerp(transform.position, transform.position - transform.forward, backwardSpeed * Time.deltaTime);
         }
         else
         {
             //Rotation
             if(axis.x > 0f){
-                transform.Rotate(0f, rotateSpeed * Time.deltaTime, 0f);
+                //transform.Rotate(0f, rotateSpeed * Time.deltaTime, 0f);
                 //player.Rotate(0f, rotateSpeed * Time.deltaTime, 0f);
+                transform.rotation = Quaternion.Slerp(transform.rotation, transform.rotation * Quaternion.Euler(Vector3.up * 90), rotateSpeed * Time.deltaTime);
             }
             else{
-                transform.Rotate(0f, rotateSpeed * -1f * Time.deltaTime, 0f);
+                //transform.Rotate(0f, rotateSpeed * -1f * Time.deltaTime, 0f);
+                transform.rotation = Quaternion.Slerp(transform.rotation, transform.rotation * Quaternion.Euler(-Vector3.up * 90), rotateSpeed * Time.deltaTime);
             }
         }
         
