@@ -332,10 +332,13 @@ public class OVRGrabber : MonoBehaviour
                     //snapOffset.x = 0; hauteur
 					//snapOffset.y = 0; profondeur
 					
-					float temp = snapOffset.x;
+					/*float temp = snapOffset.x;
 					snapOffset.x = snapOffset.y;
 					snapOffset.y = -snapOffset.z;
-					snapOffset.z = -temp;
+					snapOffset.z = -temp;*/
+
+                    snapOffset = Quaternion.Inverse(m_grabbedObj.snapOffset.localRotation) * snapOffset;
+
                     /*Vector3 snapOffsetScale = m_grabbedObj.snapOffset.localScale;
                     snapOffset = new Vector3(snapOffset.x, snapOffset.y / snapOffsetScale.y, snapOffset.z);*/
 					
