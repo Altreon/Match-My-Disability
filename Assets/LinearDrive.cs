@@ -13,19 +13,17 @@ public class LinearDrive : MonoBehaviour
     Transform door;
     void Start()
     {
-        transform.position = door.position + new Vector3(0.36f,0.06f,0f);
         lastPos = transform.position;
         GetComponent<BoxCollider>().enabled = true;
     }
 
     // Update is called once per frame
-    void Update()
+    public void Grab()
     {
-        
         if(lastPos != transform.position)
         {
             var x = door.transform.position;
-            x.x = transform.position.x - 0.36f;
+            x.x = transform.position.x - 0.287f;
             door.transform.position = x;
             lastPos = transform.position;
         }
@@ -38,7 +36,7 @@ public class LinearDrive : MonoBehaviour
             lastPos = transform.position; 
 
             var x = door.transform.position;
-            x.x = transform.position.x - 0.36f;
+            x.x = transform.position.x - 0.287f;
             door.transform.position = x;
             lastPos = transform.position;
         }
@@ -51,9 +49,14 @@ public class LinearDrive : MonoBehaviour
             lastPos = transform.position; 
 
             var x = door.transform.position;
-            x.x = transform.position.x - 0.36f;
+            x.x = transform.position.x - 0.287f;
             door.transform.position = x;
             lastPos = transform.position;
         }
+    }
+
+    public void Drop()
+    {
+        transform.position = door.transform.position + new Vector3(0.275f,0.028f,0f);
     }
 }
