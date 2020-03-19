@@ -10,11 +10,13 @@ public class SongBarSetting : MonoBehaviour
     [SerializeField] private Slider m_songSlider;
     private float m_deltat;
     private float m_volume;
+    private bool m_isMute;
 
 
 
     private void Start()
     {
+        m_isMute = false;
         m_deltat = 100.0f / (float)m_songScale;
         m_volume = (float)m_songScale / 2.0f * m_deltat;
         m_songSlider.value = m_volume / 100f;
@@ -24,6 +26,11 @@ public class SongBarSetting : MonoBehaviour
 
     public void DecreaseVolume()
     {
+        if (m_isMute)
+        {
+            Debug.Log("Volume is muted");
+            return;
+        }
         if (m_volume > 0)
         {
             m_volume -= m_deltat;
@@ -39,6 +46,13 @@ public class SongBarSetting : MonoBehaviour
 
     public void IncreaseVolume()
     {
+        if (m_isMute)
+        {
+            m_isMute = false;
+            m_volume = m_deltat;
+            m_songSlider.value = m_volume / 100f;
+            return;
+        }
         if (m_volume < 100)
         {
             m_volume += m_deltat;
@@ -52,8 +66,26 @@ public class SongBarSetting : MonoBehaviour
         }
     }
 
+    public void MuteVolume()
+    {
+        if (m_isMute)
+        {
+            m_isMute = false;
+            m_songSlider.value = m_volume / 100f;
+        }
+        else
+        {
+            m_isMute = true;
+            m_songSlider.value = 0f;
+        }
+    }
+
     public float GetVolume()
     {
+        if (m_isMute)
+        {
+            return 0f;
+        }
         return m_volume / 100f;
     }
 
