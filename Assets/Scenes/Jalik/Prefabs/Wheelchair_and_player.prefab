@@ -1,5 +1,35 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1287221576
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1287221577}
+  m_Layer: 8
+  m_Name: CanvasLimit
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1287221577
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1287221576}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 200}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6814238934669515383}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &16786389985176194
 GameObject:
   m_ObjectHideFlags: 0
@@ -9,7 +39,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 848532899416747859}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: models:Frnt_L_tire_ctrl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -41,7 +71,7 @@ GameObject:
   - component: {fileID: 4333634325003448653}
   - component: {fileID: 8395482968910935312}
   - component: {fileID: 8726411409319837698}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: models:pTorus3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -120,7 +150,7 @@ GameObject:
   - component: {fileID: 7077428724731496437}
   - component: {fileID: 2368785596941322691}
   - component: {fileID: 584628567312249219}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: models:pCylinder34
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -353,7 +383,7 @@ GameObject:
   - component: {fileID: 589155794512315892}
   - component: {fileID: 185907760737632880}
   - component: {fileID: 6918137337624142558}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: afd
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -430,7 +460,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3401776656339046793}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: wheel chair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -467,7 +497,7 @@ GameObject:
   - component: {fileID: 4414785184803805787}
   - component: {fileID: 8286704874918362441}
   - component: {fileID: 8903325650776217484}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: handle_right
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -545,7 +575,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 518083382695059312}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: models:Frnt_R_tire_ctrl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -577,7 +607,7 @@ GameObject:
   - component: {fileID: 164750376655094828}
   - component: {fileID: 368727533753456723}
   - component: {fileID: 4205534308967665806}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: models:pCylinder30
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -657,7 +687,7 @@ GameObject:
   - component: {fileID: 524964611778626176}
   - component: {fileID: 6764728100697103502}
   - component: {fileID: 1994341123406993774}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: models:pCylinder24
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -766,13 +796,14 @@ RectTransform:
   - {fileID: 4036059577163716033}
   - {fileID: 2547150647888747220}
   - {fileID: 3760497448110537119}
+  - {fileID: 1287221577}
   m_Father: {fileID: 7660408658145726452}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -199.092, y: -196.894, z: 177.539}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: -0.085, y: 1.278}
-  m_SizeDelta: {x: 1200, y: 600}
+  m_AnchoredPosition: {x: -0.9244, y: 1.623}
+  m_SizeDelta: {x: 390.399, y: 259.8922}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &4003305074454003408
 Canvas:
@@ -792,8 +823,8 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
-  m_SortingLayerID: 0
-  m_SortingOrder: 0
+  m_SortingLayerID: 1591566795
+  m_SortingOrder: 5
   m_TargetDisplay: 0
 --- !u!114 &7804486418177010576
 MonoBehaviour:
@@ -841,7 +872,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3010279273346431562}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7aaf960227867044282d921171d2d7ac, type: 3}
   m_Name: 
@@ -865,6 +896,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 714f74af458c7ac429b3d188eb0da325, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  targetCamera: {fileID: 7660408659825510271}
+  limit: {fileID: 1287221576}
+  maxDist: 2
   objectifCoffee: {fileID: 8444413786144269789}
   objectifNotepad: {fileID: 1135683053892692791}
 --- !u!1 &3091648894513951415
@@ -878,7 +912,7 @@ GameObject:
   - component: {fileID: 8789442672145790928}
   - component: {fileID: 5134120897317240107}
   - component: {fileID: 1128207270072112060}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: models:pCube22
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -957,7 +991,7 @@ GameObject:
   - component: {fileID: 7065874217154295134}
   - component: {fileID: 2078298903109107190}
   - component: {fileID: 2174702516779047390}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: models:pCylinder3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1036,7 +1070,7 @@ GameObject:
   - component: {fileID: 9108312504992077327}
   - component: {fileID: 2715978012454168031}
   - component: {fileID: 3716629659119051287}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: models:pCube1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1192,7 +1226,7 @@ GameObject:
   - component: {fileID: 9093273444977243603}
   - component: {fileID: 7270257348829144015}
   - component: {fileID: 5174935077139251217}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: models:pTorus6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1273,7 +1307,7 @@ GameObject:
   - component: {fileID: 1266211180379892893}
   - component: {fileID: 8412445420554103270}
   - component: {fileID: 1741297113685497610}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: models:pCylinder32
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1352,7 +1386,7 @@ GameObject:
   - component: {fileID: 8264800209242637715}
   - component: {fileID: 8435983804856508577}
   - component: {fileID: 2069635772466705212}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: models:pCube2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1429,7 +1463,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4327040415428885719}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: models:pTorus5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1461,7 +1495,7 @@ GameObject:
   - component: {fileID: 2982918347512250621}
   - component: {fileID: 7732147365484355665}
   - component: {fileID: 1929496133329969596}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: pTorus3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1540,7 +1574,7 @@ GameObject:
   - component: {fileID: 3052208873129623806}
   - component: {fileID: 2116962547212186835}
   - component: {fileID: 2707472430629733318}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: models:polySurface6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1617,7 +1651,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5154254154371803927}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: models:Back_R_tire_ctrl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1649,7 +1683,7 @@ GameObject:
   - component: {fileID: 8736529097510763737}
   - component: {fileID: 6768956742395305166}
   - component: {fileID: 2460510537018271503}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: polySurface1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1727,7 +1761,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5513346872270205221}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: models:pCube23
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1960,7 +1994,7 @@ GameObject:
   - component: {fileID: 3853579930895397270}
   - component: {fileID: 5063631311974580095}
   - component: {fileID: 4135581818681883344}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: models:pCube3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2039,7 +2073,7 @@ GameObject:
   - component: {fileID: 517255368959355659}
   - component: {fileID: 4909851875872711930}
   - component: {fileID: 5409019718590577287}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: models:pCylinder33
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2118,7 +2152,7 @@ GameObject:
   - component: {fileID: 1766925511570004965}
   - component: {fileID: 8305401351693869831}
   - component: {fileID: 1402124301234614924}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: handle_left
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2273,7 +2307,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1198560638074312533}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: models:Back_L_tire_ctrl
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2303,7 +2337,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6945870755299481946}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: models:pTorus4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2337,7 +2371,7 @@ GameObject:
   - component: {fileID: 5800031260299867939}
   - component: {fileID: 2207676012945836869}
   - component: {fileID: 7910992244347377152}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: models:pTorus1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2418,7 +2452,7 @@ GameObject:
   - component: {fileID: 7505432441314633309}
   - component: {fileID: 9090195588202924568}
   - component: {fileID: 5415625865520714335}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: polySurface3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2496,7 +2530,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 396422578883113947}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: chair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4648,7 +4682,7 @@ GameObject:
   - component: {fileID: 7660408658145726453}
   - component: {fileID: 1417667197176546141}
   - component: {fileID: 6593304973257772739}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Wheelchair_and_player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8149,7 +8183,7 @@ GameObject:
   - component: {fileID: 8861045051043088184}
   - component: {fileID: 4640266101560686461}
   - component: {fileID: 5625302372745296221}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: models:back_tyre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8229,7 +8263,7 @@ GameObject:
   - component: {fileID: 4750673064217357341}
   - component: {fileID: 7223751599333501950}
   - component: {fileID: 6624977509969585407}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: models:pCylinder1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8430,7 +8464,7 @@ GameObject:
   - component: {fileID: 7385125529154508887}
   - component: {fileID: 5412413263454626476}
   - component: {fileID: 3550554353827480446}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: models:pCube25
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8509,7 +8543,7 @@ GameObject:
   - component: {fileID: 2970946408087317853}
   - component: {fileID: 666084510687384875}
   - component: {fileID: 1464743819017748305}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: polySurface5
   m_TagString: Untagged
   m_Icon: {fileID: 0}
