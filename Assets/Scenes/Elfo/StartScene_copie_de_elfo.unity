@@ -496,11 +496,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8200115339172940567, guid: e8cc2d11f791047b38ef7dfd21f326c2,
         type: 3}
-      propertyPath: m_immobil
-      value: 
-      objectReference: {fileID: 1099710792}
-    - target: {fileID: 8200115339172940567, guid: e8cc2d11f791047b38ef7dfd21f326c2,
-        type: 3}
       propertyPath: m_walkable
       value: 
       objectReference: {fileID: 1510263710}
