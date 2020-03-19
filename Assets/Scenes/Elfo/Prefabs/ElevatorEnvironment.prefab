@@ -1189,6 +1189,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6218772782716293398}
     m_Modifications:
+    - target: {fileID: 5629097893007994819, guid: dfbed72cff4c3da438962d85117c8ce9,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3a1ab91f560864029b9797fefe354b10, type: 2}
     - target: {fileID: 5990912498349516424, guid: dfbed72cff4c3da438962d85117c8ce9,
         type: 3}
       propertyPath: m_Constraints
@@ -1319,6 +1324,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: PlusSongButton
       objectReference: {fileID: 0}
+    - target: {fileID: 6895002457578415147, guid: dfbed72cff4c3da438962d85117c8ce9,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3a1ab91f560864029b9797fefe354b10, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfbed72cff4c3da438962d85117c8ce9, type: 3}
 --- !u!4 &670085925363789849 stripped
@@ -1641,6 +1651,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 6218772782716293398}
     m_Modifications:
+    - target: {fileID: 5629097893007994819, guid: dfbed72cff4c3da438962d85117c8ce9,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3a1ab91f560864029b9797fefe354b10, type: 2}
     - target: {fileID: 5990912498349516424, guid: dfbed72cff4c3da438962d85117c8ce9,
         type: 3}
       propertyPath: m_Constraints
@@ -1771,6 +1786,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LessSongButton
       objectReference: {fileID: 0}
+    - target: {fileID: 6895002457578415147, guid: dfbed72cff4c3da438962d85117c8ce9,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 3a1ab91f560864029b9797fefe354b10, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: dfbed72cff4c3da438962d85117c8ce9, type: 3}
 --- !u!4 &670085924574740901 stripped
