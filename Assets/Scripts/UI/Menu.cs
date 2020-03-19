@@ -7,7 +7,6 @@ public class Menu : MonoBehaviour
 {
     public void QuitButton()
     {
-        //Application.Quit();
         OVRManager.PlatformUIConfirmQuit();
     }
 }
