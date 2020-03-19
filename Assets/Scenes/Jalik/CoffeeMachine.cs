@@ -9,13 +9,13 @@ public class CoffeeMachine : MonoBehaviour
     [SerializeField] private AudioSource cafe;
     [SerializeField] private AudioClip cafeClip;
     [SerializeField] private GameObject particles;
-    [SerializeField] private OVRGrabber toActivateAtEnd;
+    [SerializeField] private GameObject particlesCoffeeMaker;
+    //[SerializeField] private OVRGrabber toActivateAtEnd;
 
     private void Start()
     {
         cafe = gameObject.GetComponent<AudioSource>();
     }
-
 
     public void SetCupIsPresent()
     {
@@ -40,10 +40,13 @@ public class CoffeeMachine : MonoBehaviour
 
     IEnumerator waitForEndOfSound()
     {
+        particlesCoffeeMaker.SetActive(true);
         while (cafe.isPlaying)
         {
             yield return null;
+
         }
+        particlesCoffeeMaker.SetActive(false);
 
         //toActivateAtEnd.enabled = true;
         particles.SetActive(true);

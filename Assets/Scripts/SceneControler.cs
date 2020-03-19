@@ -49,9 +49,10 @@ public class SceneControler : MonoBehaviour
         }
         else if (levelIndex == 1)
         {
-            m_immobile.SetActive(false);
-            m_walkable.SetActive(false);
-            m_drivable.SetActive(true);
+            //m_immobile.SetActive(false);
+            //m_walkable.SetActive(false);
+            //m_drivable.SetActive(true);
+			//Désolé Elfo ça marchait pas en fait
         }
         else
         {

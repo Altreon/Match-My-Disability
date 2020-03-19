@@ -38,11 +38,7 @@ public class LinearDrive : MonoBehaviour
 
     void Update()
     {
-        if(!isGrabb){
-            return;
-        }
-
-        if(lastPos != transform.position)
+        if(lastPos != transform.position && isGrabb == true)
         {
             var x = door.transform.position;
             x.x = transform.position.x - decalage;
@@ -50,7 +46,7 @@ public class LinearDrive : MonoBehaviour
             lastPos = transform.position;
         }
 
-        if(transform.position.x < close)
+        if(transform.position.x < close && isGrabb == true)
         {
             var pos = transform.position;
             pos.x = close;
@@ -63,7 +59,7 @@ public class LinearDrive : MonoBehaviour
             lastPos = transform.position;
         }
 
-        if(transform.position.x > open)
+        if(transform.position.x > open && isGrabb == true)
         {
             var pos = transform.position;
             pos.x = open;
