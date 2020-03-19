@@ -4,16 +4,28 @@ using UnityEngine;
 
 public class activateCanvas : MonoBehaviour
 {
-    private GameObject toActivate;
+    private ObjectifManager[] toActivate;
 
     private void Start()
     {
-        toActivate = ObjectifManager.Instance.gameObject;
+        initializeArray();
     }
 
+    private void initializeArray()
+    {
+        toActivate = Resources.FindObjectsOfTypeAll<ObjectifManager>();
+    }
+    
     private void OnTriggerEnter(Collider other)
     {
         Debug.Log("OKOKOKOK");
-        toActivate.SetActive(true);
+        if (toActivate.Length == 0)
+        {
+            initializeArray();
+        }
+        foreach (ObjectifManager om in toActivate)
+        {
+            om.gameObject.SetActive(true);
+        }
     }
 }

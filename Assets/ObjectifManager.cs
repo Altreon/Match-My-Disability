@@ -25,17 +25,24 @@ public class ObjectifManager : MonoBehaviour
             _instance = this;
         else
         {
-            Debug.LogError("Can't have 2 OvjectifManager. Destroying second");
-            Destroy(gameObject);
+            return;
         }
 
         maxScale = transform.localScale;
         Debug.Log((transform.position - targetCamera.transform.position).magnitude);
+        gameObject.SetActive(false);
     }
 
-    private void Start()
+    private void OnDisable()
     {
-        gameObject.SetActive(false);
+        if (_instance == this)
+            _instance = null;
+    }
+
+    private void OnEnable()
+    {
+        if (_instance == null)
+            _instance = this;
     }
 
     public void setObjectif(string name)

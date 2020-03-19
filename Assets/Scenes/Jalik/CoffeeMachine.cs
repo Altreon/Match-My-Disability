@@ -10,7 +10,7 @@ public class CoffeeMachine : MonoBehaviour
     [SerializeField] private AudioClip cafeClip;
     [SerializeField] private GameObject particles;
     [SerializeField] private GameObject particlesCoffeeMaker;
-    [SerializeField] private OVRGrabber toActivateAtEnd;
+    //[SerializeField] private OVRGrabber toActivateAtEnd;
 
     private void Start()
     {
@@ -40,9 +40,9 @@ public class CoffeeMachine : MonoBehaviour
 
     IEnumerator waitForEndOfSound()
     {
+        particlesCoffeeMaker.SetActive(true);
         while (cafe.isPlaying)
         {
-            particlesCoffeeMaker.SetActive(true);
             yield return null;
 
         }

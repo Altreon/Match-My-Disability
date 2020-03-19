@@ -133,6 +133,11 @@ PrefabInstance:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3010279273346431562, guid: ff3e0c21fa012664185ffe40c624d39c,
+        type: 3}
+      propertyPath: m_TagString
+      value: CanvasObjectifs
+      objectReference: {fileID: 0}
     - target: {fileID: 7660408658145726452, guid: ff3e0c21fa012664185ffe40c624d39c,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -215,6 +220,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff3e0c21fa012664185ffe40c624d39c, type: 3}
+--- !u!1 &17779784 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7660408658145726459, guid: ff3e0c21fa012664185ffe40c624d39c,
+    type: 3}
+  m_PrefabInstance: {fileID: 17779783}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &379044953
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -226,6 +237,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3010279273346431562, guid: d23ca91b74582904092b410d86b95fa8,
+        type: 3}
+      propertyPath: m_TagString
+      value: CanvasObjectifs
       objectReference: {fileID: 0}
     - target: {fileID: 7660408658145726452, guid: d23ca91b74582904092b410d86b95fa8,
         type: 3}
@@ -329,6 +345,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3010279273346431562, guid: 9e7ae333e18217346915f92a16bc5426,
+        type: 3}
+      propertyPath: m_TagString
+      value: CanvasObjectifs
+      objectReference: {fileID: 0}
     - target: {fileID: 7660408658145726452, guid: 9e7ae333e18217346915f92a16bc5426,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -738,12 +759,17 @@ PrefabInstance:
         type: 3}
       propertyPath: m_walkable
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1070377539}
     - target: {fileID: 8200115339172940567, guid: e8cc2d11f791047b38ef7dfd21f326c2,
         type: 3}
       propertyPath: m_drivable
       value: 
       objectReference: {fileID: 379044954}
+    - target: {fileID: 8200115339172940567, guid: e8cc2d11f791047b38ef7dfd21f326c2,
+        type: 3}
+      propertyPath: m_immobile
+      value: 
+      objectReference: {fileID: 17779784}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e8cc2d11f791047b38ef7dfd21f326c2, type: 3}
 --- !u!114 &6218772783129500757 stripped

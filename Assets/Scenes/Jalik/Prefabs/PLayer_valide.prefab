@@ -4683,7 +4683,7 @@ GameObject:
   - component: {fileID: 1417667197176546141}
   - component: {fileID: 6593304973257772739}
   m_Layer: 8
-  m_Name: Wheelchair_and_player 2
+  m_Name: PLayer_valide
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

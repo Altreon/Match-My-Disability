@@ -8,6 +8,7 @@ TagManager:
   - Walkable
   - Drivable
   - Immobile
+  - CanvasObjectifs
   layers:
   - Default
   - TransparentFX
@@ -28,7 +29,7 @@ TagManager:
   - PostProcessing
   - Index
   - Cupboard
-  - 
+  - JPP
   - 
   - 
   - 
