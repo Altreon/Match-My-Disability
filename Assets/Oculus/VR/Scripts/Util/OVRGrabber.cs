@@ -332,10 +332,14 @@ public class OVRGrabber : MonoBehaviour
                     //snapOffset.x = 0; hauteur
 					//snapOffset.y = 0; profondeur
 					
-					float temp = snapOffset.x;
+					/*float temp = snapOffset.x;
 					snapOffset.x = snapOffset.y;
 					snapOffset.y = -snapOffset.z;
-					snapOffset.z = -temp;
+					snapOffset.z = -temp;*/
+
+                    snapOffset = Quaternion.Inverse(m_grabbedObj.snapOffset.localRotation) * snapOffset;
+                    snapOffset = -snapOffset;
+
                     /*Vector3 snapOffsetScale = m_grabbedObj.snapOffset.localScale;
                     snapOffset = new Vector3(snapOffset.x, snapOffset.y / snapOffsetScale.y, snapOffset.z);*/
 					
@@ -363,10 +367,7 @@ public class OVRGrabber : MonoBehaviour
                     //m_grabbedObjectRotOff = m_grabbedObj.snapOffset.rotation * m_grabbedObjectRotOff;
                     //m_grabbedObjectRotOff = Quaternion.Inverse(m_grabbedObj.snapOffset.localRotation);
 					if (m_controller == OVRInput.Controller.LTouch){
-                        //m_grabbedObjectRotOff = m_grabbedObj.snapOffset.localRotation;
-                        m_grabbedObjectRotOff = Quaternion.Inverse(m_grabbedObj.snapOffset.localRotation);
-						m_grabbedObjectRotOff *= Quaternion.Euler(Vector3.left * 180);
-						//m_grabbedObjectRotOff *= Quaternion.Euler(Vector3.forward * -90);
+                        m_grabbedObjectRotOff = m_grabbedObj.snapOffset.localRotation;
                     }else{
                         m_grabbedObjectRotOff = Quaternion.Inverse(m_grabbedObj.snapOffset.localRotation);
                     }

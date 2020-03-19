@@ -5,6 +5,9 @@ TagManager:
   serializedVersion: 2
   tags:
   - Button
+  - Walkable
+  - Drivable
+  - Immobile
   layers:
   - Default
   - TransparentFX
@@ -21,10 +24,10 @@ TagManager:
   - Button
   - ButtonLimit
   - Hand
-  - Cupboard
+  - CupboardGrabb
   - PostProcessing
   - Index
-  - 
+  - Cupboard
   - 
   - 
   - 

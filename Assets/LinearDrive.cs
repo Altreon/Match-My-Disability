@@ -4,28 +4,48 @@ using UnityEngine;
 
 public class LinearDrive : MonoBehaviour
 {
+    private float close;
+    private float open;
     [SerializeField] 
-    private float close = -10.2f;
-    [SerializeField] 
-    private float open = -9.739f;
+    private float decalage =  0.287f;
     private Vector3 lastPos;    
     [SerializeField]
     Transform door;
+    bool isGrabb;
+
     void Start()
     {
-        transform.position = door.position + new Vector3(0.36f,0.06f,0f);
+        isGrabb = false;
+        close = transform.position.x;
+        open = close + 0.442f;
         lastPos = transform.position;
         GetComponent<BoxCollider>().enabled = true;
     }
 
     // Update is called once per frame
+
+    public void Grab()
+    {
+        isGrabb = true;
+    }
+
+    public void Drop()
+    {
+        isGrabb = false;
+        transform.position = door.transform.position + new Vector3(decalage,0.028f,0f);
+    }
+
+
     void Update()
     {
-        
+        if(!isGrabb){
+            return;
+        }
+
         if(lastPos != transform.position)
         {
             var x = door.transform.position;
-            x.x = transform.position.x - 0.36f;
+            x.x = transform.position.x - decalage;
             door.transform.position = x;
             lastPos = transform.position;
         }
@@ -38,7 +58,7 @@ public class LinearDrive : MonoBehaviour
             lastPos = transform.position; 
 
             var x = door.transform.position;
-            x.x = transform.position.x - 0.36f;
+            x.x = transform.position.x - decalage;
             door.transform.position = x;
             lastPos = transform.position;
         }
@@ -51,7 +71,7 @@ public class LinearDrive : MonoBehaviour
             lastPos = transform.position; 
 
             var x = door.transform.position;
-            x.x = transform.position.x - 0.36f;
+            x.x = transform.position.x - decalage;
             door.transform.position = x;
             lastPos = transform.position;
         }
