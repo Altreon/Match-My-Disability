@@ -5,10 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Elfo/StartScene_copie_de_elfo.unity
     guid: 59f6917f2912f4df8b9f7b94e327b8dc
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Jalik/StartScene_copie_de_elfo.unity
     guid: 2489a07fa4232b04bb5ead58b7ae5d90
   - enabled: 0
