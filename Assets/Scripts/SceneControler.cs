@@ -15,12 +15,6 @@ public class SceneControler : MonoBehaviour
     {
         
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        //StartCoroutine(LoadLeve(0));
-    }
     */
 
     IEnumerator LoadLeveCoroutine(int levelIndex)

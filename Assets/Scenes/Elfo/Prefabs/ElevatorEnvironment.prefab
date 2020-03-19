@@ -3093,7 +3093,7 @@ PrefabInstance:
     - target: {fileID: 6845783131500773569, guid: dfbed72cff4c3da438962d85117c8ce9,
         type: 3}
       propertyPath: clickEvent.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6845783131500773569, guid: dfbed72cff4c3da438962d85117c8ce9,
         type: 3}
@@ -3109,11 +3109,11 @@ PrefabInstance:
         type: 3}
       propertyPath: clickEvent.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 4423694044750727031}
+      objectReference: {fileID: 7295955075600539578}
     - target: {fileID: 6845783131500773569, guid: dfbed72cff4c3da438962d85117c8ce9,
         type: 3}
       propertyPath: clickEvent.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: DecreaseVolume
+      value: QuitButton
       objectReference: {fileID: 0}
     - target: {fileID: 6845783131500773569, guid: dfbed72cff4c3da438962d85117c8ce9,
         type: 3}
