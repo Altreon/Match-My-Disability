@@ -14,7 +14,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Jalik/SampleScene_JALIK.unity
     guid: 453064712c6dcc44bbff90cf9dd76aed
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Altreon/SampleScene_copie-JALIK.unity
     guid: 4515010e879bf3241928330d071c0473
+  - enabled: 1
+    path: Assets/Scenes/Jalik/CopiedeCopiedeCopideCopiede.unity
+    guid: ece47c59ca2ad7847af65b13ba2e1ef0
   m_configObjects: {}
