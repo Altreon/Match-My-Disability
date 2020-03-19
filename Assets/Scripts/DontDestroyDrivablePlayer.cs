@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DontDestroyPlayer : MonoBehaviour
+public class DontDestroyDrivablePlayer : MonoBehaviour
 {
     private void Awake()
     {
-        GameObject[] playerObjs = GameObject.FindGameObjectsWithTag("Player");
+        GameObject[] playerObjs = GameObject.FindGameObjectsWithTag("Drivable");
 
         if (playerObjs.Length > 1)
         {
