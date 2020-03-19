@@ -8,7 +8,7 @@ public class SceneControler : MonoBehaviour
 
     //private int m_currentScene;
     public ElevatorAnimationScript m_elevatorAnimationScript;
-    public GameObject m_immobil;
+    public GameObject m_immobile;
     public GameObject m_walkable;
     public GameObject m_drivable;
 
@@ -43,13 +43,13 @@ public class SceneControler : MonoBehaviour
     {
         if (levelIndex == 0)
         {
-            m_immobil.SetActive(false);
+            m_immobile.SetActive(false);
             m_drivable.SetActive(false);
             m_walkable.SetActive(true);
         }
         else if (levelIndex == 1)
         {
-            m_immobil.SetActive(false);
+            m_immobile.SetActive(false);
             m_walkable.SetActive(false);
             m_drivable.SetActive(true);
         }
