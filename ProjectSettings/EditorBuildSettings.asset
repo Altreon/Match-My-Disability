@@ -5,7 +5,7 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Elfo/StartScene_copie_de_elfo.unity
     guid: 59f6917f2912f4df8b9f7b94e327b8dc
   - enabled: 0
@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/Altreon/SampleScene_copie-JALIK.unity
     guid: 4515010e879bf3241928330d071c0473
+  - enabled: 1
+    path: Assets/Scenes/Jalik/STARTCopiedeSTARTCopiedeSTARTCopiedeSTARTCopiede.unity
+    guid: 5a1185921b703fd45ad90f064065b227
   - enabled: 1
     path: Assets/Scenes/Jalik/CopiedeCopiedeCopideCopiede.unity
     guid: ece47c59ca2ad7847af65b13ba2e1ef0

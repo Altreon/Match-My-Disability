@@ -12,13 +12,15 @@ public class SceneControler : MonoBehaviour
     public GameObject m_walkable;
     public GameObject m_drivable;
 
-    /*
+    public PlayerActivator activator;
+    
     // Start is called before the first frame update
     void Start()
     {
-        
+        if(activator == null)
+            Debug.LogError("activator est null ! Initailise le dans l'éditeur stp");
     }
-    */
+    
 
     IEnumerator LoadLeveCoroutine(int levelIndex)
     {
@@ -28,6 +30,7 @@ public class SceneControler : MonoBehaviour
         {
             yield return null;
         }
+        m_elevatorAnimationScript.OpenDoor();
     }
 
     public void LoadLevel(int levelIndex)
@@ -35,12 +38,15 @@ public class SceneControler : MonoBehaviour
         m_elevatorAnimationScript.CloseDoor();
         SwitchPlayer(levelIndex);
         StartCoroutine(LoadLeveCoroutine(1));
-        m_elevatorAnimationScript.OpenDoor();
+        //Je l'ai déplacé pour qu'on ouvre la porte à la fin du chargement
 
     }
 
     private void SwitchPlayer(int levelIndex)
     {
+        activator.switchPlayer(levelIndex);
+        /* Désolé ça ne marchait pas d'activer et désactiver les gameobject finalement
+         Il faut que tout se fasse dans le même game object et c'est pour ça que j'ai fais un nouveau script
         if (levelIndex == 0)
         {
             m_immobile.SetActive(false);
@@ -58,5 +64,6 @@ public class SceneControler : MonoBehaviour
         {
             Debug.Log("Scene inconnue");
         }
+        */
     }
 }
