@@ -6,10 +6,10 @@ public class ObjectifManager : MonoBehaviour
 {
 
     private static ObjectifManager _instance = null;
-    [SerializeField] private GameObject targetCamera;
-    [SerializeField] private GameObject limit;
-    [SerializeField] private float maxDist;
-    private Vector3 maxScale;
+    //[SerializeField] private GameObject targetCamera;
+    //[SerializeField] private GameObject limit;
+    //[SerializeField] private float maxDist;
+    //private Vector3 maxScale;
     public static ObjectifManager Instance
     {
         get { return _instance; }
@@ -27,9 +27,10 @@ public class ObjectifManager : MonoBehaviour
         {
             return;
         }
-
+        /*
         maxScale = transform.localScale;
         Debug.Log((transform.position - targetCamera.transform.position).magnitude);
+        */
         gameObject.SetActive(false);
     }
 
@@ -58,6 +59,7 @@ public class ObjectifManager : MonoBehaviour
     }
     
     //CANVS RESCALE
+    /*
     void Update()
     {
         RaycastHit infos;
@@ -77,4 +79,5 @@ public class ObjectifManager : MonoBehaviour
             transform.localScale *= ratio;
         }
     }
+    */
 }

@@ -14,6 +14,7 @@ public class PlayerActivator : MonoBehaviour
     [SerializeField] private Rigidbody playerRigidbody;
     [SerializeField] private float massWheelChain;
     [SerializeField] private float massPlayer;
+    [SerializeField] private GameObject OVRPlayerController;
 
     [SerializeField] private CharacterController dataPlayer;
     [SerializeField] private float heightPlayerWheelChair;
@@ -34,7 +35,8 @@ public class PlayerActivator : MonoBehaviour
         vignette = postProcess.profile.GetSetting<Vignette>();
         if(vignette == null)
             Debug.LogError("Ayaaaah le post process contient pas de vignette c chaud frer");
-        startingIntensity = vignette.intensity;
+        startingIntensity = vignette.intensity.value;
+        Debug.Log("intensity = " + vignette.intensity.value);
         if(walkable == null)
             Debug.LogError("Walkable est null ! Initailise le dans l'éditeur stp");
         if(drivable == null)
@@ -76,10 +78,12 @@ public class PlayerActivator : MonoBehaviour
         do
         {
             currentTime = Time.time;
+            float newValue = Mathf.Lerp(startingIntensity, 1f, Mathf.InverseLerp(startTime, endTime, currentTime));
             vignette.intensity = new FloatParameter() //Oui je sais on fais un new à chaque frame mais je sais pas comment faire autrement 
             {
-                value = Mathf.Lerp(startingIntensity, 1f, Mathf.InverseLerp(startTime, endTime, currentTime))
+                value = newValue
             };
+            Debug.Log("intensity = " + vignette.intensity.value);
             yield return null;
         } while (currentTime  < endTime || vignette.intensity < 1f);
 
@@ -99,7 +103,6 @@ public class PlayerActivator : MonoBehaviour
         dataPlayer.height = heightPlayerWalk;
         wheelchairCollider.enabled = false;
         playerRigidbody.mass = massPlayer;
-        playerRigidbody.useGravity = false;
         StartCoroutine(UndoVignette());
     }
     
@@ -113,7 +116,8 @@ public class PlayerActivator : MonoBehaviour
         dataPlayer.height = heightPlayerWheelChair;
         wheelchairCollider.enabled = true;
         playerRigidbody.mass = massWheelChain;
-        playerRigidbody.useGravity = false;
+        if (OVRPlayerController.transform.localPosition.y < 1f)
+            OVRPlayerController.transform.localPosition = Vector3.up * 1.279f;
         StartCoroutine(UndoVignette());
     }
 
@@ -124,11 +128,14 @@ public class PlayerActivator : MonoBehaviour
         float currentTime;
         do
         {
-            currentTime = Time.time;
+            currentTime = Time.time - startTime;
+            float newValue = Mathf.Lerp(startingIntensity, 1f,
+                Mathf.InverseLerp(startTime, endTime, endTime - currentTime));
             vignette.intensity = new FloatParameter() //Oui je sais on fais un new à chaque frame mais je sais pas comment faire autrement 
             {
-                value = Mathf.Lerp(startingIntensity, 1f, Mathf.InverseLerp(startTime, endTime, endTime - currentTime))
+                value = newValue
             };
+            Debug.Log("intensity = " + vignette.intensity.value);
             yield return null;
         } while (currentTime  < endTime || vignette.intensity > startingIntensity);
     }
