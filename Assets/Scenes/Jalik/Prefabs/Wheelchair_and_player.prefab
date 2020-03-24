@@ -8084,7 +8084,7 @@ MonoBehaviour:
     m_Bits: 65536
   stopNaNPropagation: 1
   finalBlitToCameraTarget: 0
-  antialiasingMode: 1
+  antialiasingMode: 0
   temporalAntialiasing:
     jitterSpread: 0.539
     sharpness: 2.002
