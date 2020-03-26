@@ -29,7 +29,14 @@ public class LinearDrive : MonoBehaviour
         lastPos = transform.position;
         GetComponent<BoxCollider>().enabled = true;
 
-        Grab();
+        for(int i = 0 ; i < ElementsInside.Count ; i++)
+        {
+            ElementsInside[i].GetComponent<Rigidbody>().useGravity = false;
+            ElementsInside[i].GetComponent<Rigidbody>().isKinematic = true;
+        }
+
+        //GrabCup(ElementsInside[0]);
+        //Grab();
     }
 
     // Update is called once per frame
@@ -111,7 +118,12 @@ public class LinearDrive : MonoBehaviour
     {
         if(ElementsInside.Contains(obj))
         {
-            ElementsInside.Remove(obj);               
+            ElementsInside.Remove(obj); 
+
+            GetComponent<MeshRenderer>().enabled = false; 
+
+            obj.GetComponent<Rigidbody>().useGravity = true;
+            obj.GetComponent<Rigidbody>().isKinematic = false;             
         }
     }
 }
