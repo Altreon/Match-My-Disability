@@ -6757,7 +6757,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 433161819}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.680053, y: 4.010416, z: 11.231508}
+  m_LocalPosition: {x: -8.192, y: 2.745, z: 11.231508}
   m_LocalScale: {x: 0.0954476, y: 0.23158136, z: 1.193697}
   m_Children: []
   m_Father: {fileID: 0}
@@ -18526,7 +18526,6 @@ MonoBehaviour:
   cafeClip: {fileID: 8300000, guid: ddcc5d3562f3cc141ba36d27e45c5219, type: 3}
   particles: {fileID: 721893385}
   particlesCoffeeMaker: {fileID: 244869088}
-  toActivateAtEnd: {fileID: 0}
 --- !u!1 &1950213456
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,12 +10,15 @@ public class LinearDrive : MonoBehaviour
     private float decalage =  0.287f;
     private Vector3 lastPos;    
     [SerializeField]
-    Transform door;
+    GameObject door;
     bool isGrabb;
+    private Rigidbody rb;
 
     void Start()
     {
         isGrabb = false;
+        rb = door.GetComponent<Rigidbody>();
+        rb.isKinematic = true;
         close = transform.position.x;
         open = close + 0.442f;
         lastPos = transform.position;
@@ -27,12 +30,14 @@ public class LinearDrive : MonoBehaviour
     public void Grab()
     {
         isGrabb = true;
+        rb.isKinematic = false;
     }
 
     public void Drop()
     {
         isGrabb = false;
-        transform.position = door.transform.position + new Vector3(decalage,0.028f,0f);
+        rb.isKinematic = true;
+        transform.position = door.GetComponent<Transform>().transform.position + new Vector3(decalage,0.028f,0f);
     }
 
 
@@ -40,9 +45,9 @@ public class LinearDrive : MonoBehaviour
     {
         if(lastPos != transform.position && isGrabb == true)
         {
-            var x = door.transform.position;
+            var x = door.GetComponent<Transform>().transform.position;
             x.x = transform.position.x - decalage;
-            door.transform.position = x;
+            door.GetComponent<Transform>().transform.position = x;
             lastPos = transform.position;
         }
 
@@ -53,9 +58,9 @@ public class LinearDrive : MonoBehaviour
             transform.position = pos;
             lastPos = transform.position; 
 
-            var x = door.transform.position;
+            var x = door.GetComponent<Transform>().transform.position;
             x.x = transform.position.x - decalage;
-            door.transform.position = x;
+            door.GetComponent<Transform>().transform.position = x;
             lastPos = transform.position;
         }
 
@@ -66,9 +71,9 @@ public class LinearDrive : MonoBehaviour
             transform.position = pos;
             lastPos = transform.position; 
 
-            var x = door.transform.position;
+            var x = door.GetComponent<Transform>().transform.position;
             x.x = transform.position.x - decalage;
-            door.transform.position = x;
+            door.GetComponent<Transform>().transform.position = x;
             lastPos = transform.position;
         }
     }
