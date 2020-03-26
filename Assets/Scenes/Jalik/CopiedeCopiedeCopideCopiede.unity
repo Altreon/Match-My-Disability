@@ -2722,7 +2722,7 @@ GameObject:
   - component: {fileID: 750859156}
   - component: {fileID: 750859155}
   - component: {fileID: 750859154}
-  m_Layer: 0
+  m_Layer: 21
   m_Name: HitboxChair
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10061,6 +10061,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   decalage: 0.287
   door: {fileID: 7900092923938428434}
+  isGrabb: 0
+  ElementsInside: []
 --- !u!114 &2222952040776773509
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11163,6 +11165,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1406299875, guid: 00416d7de8afad546bbb3b7ac3de871d, type: 3}
+      propertyPath: m_Constraints
+      value: 84
+      objectReference: {fileID: 0}
+    - target: {fileID: 5978436097960328539, guid: 00416d7de8afad546bbb3b7ac3de871d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5978436098304341864, guid: 00416d7de8afad546bbb3b7ac3de871d,
+        type: 3}
+      propertyPath: m_Layer
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 5978436098964071397, guid: 00416d7de8afad546bbb3b7ac3de871d,
         type: 3}
       propertyPath: m_Name
@@ -11964,6 +11980,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3643015736000415157, guid: d23ca91b74582904092b410d86b95fa8,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7660408658145726452, guid: d23ca91b74582904092b410d86b95fa8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -12027,7 +12048,7 @@ PrefabInstance:
     - target: {fileID: 7660408658145726459, guid: d23ca91b74582904092b410d86b95fa8,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d23ca91b74582904092b410d86b95fa8, type: 3}

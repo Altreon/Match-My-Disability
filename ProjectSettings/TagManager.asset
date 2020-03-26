@@ -9,6 +9,7 @@ TagManager:
   - Drivable
   - Immobile
   - CanvasObjectifs
+  - CupBoard
   - FinalChair
   layers:
   - Default
@@ -31,8 +32,8 @@ TagManager:
   - Index
   - Cupboard
   - JPP
-  - 
-  - 
+  - FinalChair
+  - FinalChairHitBox
   - 
   - 
   - 

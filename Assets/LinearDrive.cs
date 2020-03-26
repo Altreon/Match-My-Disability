@@ -11,18 +11,25 @@ public class LinearDrive : MonoBehaviour
     private Vector3 lastPos;    
     [SerializeField]
     GameObject door;
-    bool isGrabb;
+
+    [SerializeField]
+    private bool isGrabb;
     private Rigidbody rb;
+
+    [SerializeField]
+    public List<GameObject> ElementsInside = new List<GameObject>();
 
     void Start()
     {
-        isGrabb = true;
-        rb = GetComponent<Rigidbody>();
+        isGrabb = false;
+        rb = door.GetComponent<Rigidbody>();
         rb.isKinematic = true;
         close = transform.position.x;
         open = close + 0.442f;
         lastPos = transform.position;
         GetComponent<BoxCollider>().enabled = true;
+
+        Grab();
     }
 
     // Update is called once per frame
@@ -31,23 +38,39 @@ public class LinearDrive : MonoBehaviour
     {
         isGrabb = true;
         rb.isKinematic = false;
+
+        for(int i = 0 ; i < ElementsInside.Count ; i++)
+        {
+            ElementsInside[i].GetComponent<Rigidbody>().useGravity = false;
+            ElementsInside[i].GetComponent<Rigidbody>().isKinematic = true;
+        }
     }
 
     public void Drop()
     {
+        transform.position = door.GetComponent<Transform>().transform.position + new Vector3(decalage,0.028f,0f);
         isGrabb = false;
         rb.isKinematic = true;
-        transform.position = door.GetComponent<Transform>().transform.position + new Vector3(decalage,0.028f,0f);
+
+        for(int i = 0 ; i < ElementsInside.Count ; i++)
+        {
+            ElementsInside[i].GetComponent<Rigidbody>().useGravity = true;
+            ElementsInside[i].GetComponent<Rigidbody>().isKinematic = false;
+        }
     }
 
 
-    void Update()
+    void FixedUpdate()
     {
         if(lastPos != transform.position && isGrabb == true)
         {
-            var x = door.GetComponent<Transform>().transform.position;
-            x.x = transform.position.x - decalage;
-            door.GetComponent<Transform>().transform.position = x;
+            rb.MovePosition(transform.position - new Vector3(decalage,0f,0f));
+
+            for(int i = 0 ; i < ElementsInside.Count ; i++)
+            {
+                ElementsInside[i].GetComponent<Rigidbody>().MovePosition(transform.position - new Vector3(decalage,0f,0f));
+            }
+
             lastPos = transform.position;
         }
 
@@ -56,12 +79,15 @@ public class LinearDrive : MonoBehaviour
             var pos = transform.position;
             pos.x = close;
             transform.position = pos;
-            lastPos = transform.position; 
 
-            var x = door.GetComponent<Transform>().transform.position;
-            x.x = transform.position.x - decalage;
-            door.GetComponent<Transform>().transform.position = x;
-            lastPos = transform.position;
+            rb.MovePosition(transform.position - new Vector3(decalage,0f,0f));
+
+            for(int i = 0 ; i < ElementsInside.Count ; i++)
+            {
+                ElementsInside[i].GetComponent<Rigidbody>().MovePosition(transform.position - new Vector3(decalage,0f,0f));
+            }
+
+            lastPos = transform.position; 
         }
 
         if(transform.position.x > open && isGrabb == true)
@@ -69,12 +95,23 @@ public class LinearDrive : MonoBehaviour
             var pos = transform.position;
             pos.x = open;
             transform.position = pos;
-            lastPos = transform.position; 
 
-            var x = door.GetComponent<Transform>().transform.position;
-            x.x = transform.position.x - decalage;
-            door.GetComponent<Transform>().transform.position = x;
-            lastPos = transform.position;
+            rb.MovePosition(transform.position - new Vector3(decalage,0f,0f));
+
+            for(int i = 0 ; i < ElementsInside.Count ; i++)
+            {
+                ElementsInside[i].GetComponent<Rigidbody>().MovePosition(transform.position - new Vector3(decalage,0f,0f));
+            }
+
+            lastPos = transform.position; 
+        }
+    }
+
+    public void GrabCup(GameObject obj)
+    {
+        if(ElementsInside.Contains(obj))
+        {
+            ElementsInside.Remove(obj);               
         }
     }
 }
