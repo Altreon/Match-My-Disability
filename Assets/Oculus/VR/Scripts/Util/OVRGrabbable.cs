@@ -42,6 +42,7 @@ public class OVRGrabbable : MonoBehaviour
     protected OVRGrabber m_grabbedBy = null;
 
     //MODIFICATION
+    public bool isHightLight = true;
     public Color hightLightDefaultColor;
 	public Color hightLightTriggerColor;
 	public Color hightLightGrabColor;
@@ -176,10 +177,17 @@ public class OVRGrabbable : MonoBehaviour
         //MODIFICATION
         m_renderer = gameObject.GetComponent<Renderer>();
         m_mpb = new MaterialPropertyBlock();
-        ClearHightLight();
+
+        if(isHightLight){
+            ClearHightLight();
+        }
     }
 
     void Update () {
+        if(!isHightLight){
+            return;
+        }
+
         if(blink != Blink.Stop){
             float alpha = Time.time % blickTime;
 
@@ -205,6 +213,10 @@ public class OVRGrabbable : MonoBehaviour
 	//MODIFICATION
     public void SetHightLightTrigger()
     {
+        if(!isHightLight){
+            return;
+        }
+
 		m_mpb.SetColor("_OutlineColor", hightLightTriggerColor);
 		m_renderer.SetPropertyBlock(m_mpb);
 
@@ -214,6 +226,10 @@ public class OVRGrabbable : MonoBehaviour
     //MODIFICATION
     public void SetHightLightGrab()
     {
+        if(!isHightLight){
+            return;
+        }
+
 		m_mpb.SetColor("_OutlineColor", hightLightGrabColor);
 		m_renderer.SetPropertyBlock(m_mpb);
 
@@ -223,6 +239,10 @@ public class OVRGrabbable : MonoBehaviour
     //MODIFICATION
     public void ClearHightLight()
     {
+        if(!isHightLight){
+            return;
+        }
+        
         m_mpb.SetColor("_OutlineColor", hightLightDefaultColor);
         m_renderer.SetPropertyBlock(m_mpb);
 
