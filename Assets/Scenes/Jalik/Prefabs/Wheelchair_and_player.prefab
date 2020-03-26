@@ -580,7 +580,7 @@ SkinnedMeshRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 670271139}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
@@ -1231,7 +1231,6 @@ GameObject:
   - component: {fileID: 1181967139}
   - component: {fileID: 1181967138}
   - component: {fileID: 1181967142}
-  - component: {fileID: 1181967141}
   - component: {fileID: 1181967143}
   m_Layer: 9
   m_Name: rightStick
@@ -1332,56 +1331,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1181967141
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1181967136}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02d61468f8b77ae4b92c344bc9a600fb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_allowOffhandGrab: 1
-  m_snapPosition: 0
-  m_snapOrientation: 0
-  m_snapOffset: {fileID: 0}
-  m_grabPoints: []
-  grab:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1181967143}
-        m_MethodName: control
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-  drop:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1181967143}
-        m_MethodName: control
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  isHightLight: 0
-  hightLightDefaultColor: {r: 0, g: 0, b: 0, a: 0}
-  hightLightTriggerColor: {r: 0, g: 0, b: 0, a: 0}
-  hightLightGrabColor: {r: 0, g: 0, b: 0, a: 0}
-  blickTime: 1
 --- !u!114 &1181967143
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1395,10 +1344,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   chairController: {fileID: 7660408658145726453}
+  handT: {fileID: 7660408659825858143}
+  handGrabber: {fileID: 7660408659158518314}
   handRenderer: {fileID: 7757213506174569462}
   fakeHandRenderer: {fileID: 670271141}
   deadzone: 0.25
   rotateStick: 10
+  distanceFromhand: 0.1
 --- !u!1 &1231565529
 GameObject:
   m_ObjectHideFlags: 0

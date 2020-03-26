@@ -9,10 +9,13 @@ public class stickController : MonoBehaviour
     static public bool controlled = false;
 
     public WheelchairController chairController;
+    public Transform handT;
+    public OVRGrabber handGrabber;
     public Renderer handRenderer;
     public Renderer fakeHandRenderer;
     [SerializeField] private float deadzone = 0.25f;
     [SerializeField] private float rotateStick = 10f;
+    [SerializeField] private float distanceFromhand = 1f;
 
     bool handCollision = false;
 
@@ -29,6 +32,18 @@ public class stickController : MonoBehaviour
     }*/
 
     void Update () {
+        bool handCollision = false;
+        if(Vector3.Distance(transform.position, handT.position) < distanceFromhand){
+            handCollision = true;
+        }else{
+            if(controlled){
+                controlled = false;
+
+                handRenderer.enabled = true;
+                fakeHandRenderer.enabled = false;
+            }
+        }
+
         if(OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger) > deadzone){
             if(handCollision && !controlled){
                 controlled = true;
@@ -46,6 +61,7 @@ public class stickController : MonoBehaviour
         }
         
         if(!controlled){
+            transform.rotation = transform.parent.rotation;
             return;
         }
 
@@ -79,7 +95,7 @@ public class stickController : MonoBehaviour
         chairController.Move(axis);
     }
 
-    void OnTriggerEnter(Collider collider) {
+    /*void OnTriggerEnter(Collider collider) {
         if(collider.gameObject.layer != LayerMask.NameToLayer("Hand")){
             return;
         }
@@ -93,5 +109,5 @@ public class stickController : MonoBehaviour
         }
 
         handCollision = false;
-    }
+    }*/
 }

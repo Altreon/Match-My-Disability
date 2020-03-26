@@ -1294,6 +1294,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0b91608689a55274ba1eaf320ceded12, type: 3}
+--- !u!4 &325516381 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7660408659825858143, guid: d23ca91b74582904092b410d86b95fa8,
+    type: 3}
+  m_PrefabInstance: {fileID: 7660408658095830156}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &333954293
 GameObject:
   m_ObjectHideFlags: 0
@@ -1937,7 +1943,7 @@ PrefabInstance:
     - target: {fileID: 4044105921667851378, guid: 7fd6694b50e24e84e9e5a0e3fa2b4125,
         type: 3}
       propertyPath: grab.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4044105921667851378, guid: 7fd6694b50e24e84e9e5a0e3fa2b4125,
         type: 3}
@@ -1957,8 +1963,13 @@ PrefabInstance:
     - target: {fileID: 4044105921667851378, guid: 7fd6694b50e24e84e9e5a0e3fa2b4125,
         type: 3}
       propertyPath: grab.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
+    - target: {fileID: 4044105921667851378, guid: 7fd6694b50e24e84e9e5a0e3fa2b4125,
+        type: 3}
+      propertyPath: grab.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
+      value: 
+      objectReference: {fileID: 121607330}
     - target: {fileID: 4044105921668161765, guid: 7fd6694b50e24e84e9e5a0e3fa2b4125,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -4514,6 +4525,18 @@ CapsuleCollider:
   m_Height: 0.05
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &986836001 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7660408659158518314, guid: d23ca91b74582904092b410d86b95fa8,
+    type: 3}
+  m_PrefabInstance: {fileID: 7660408658095830156}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd425c2d06f39bf4899d07c05d0f10eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1007853432
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12127,11 +12150,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 670271139, guid: d23ca91b74582904092b410d86b95fa8, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 670271141, guid: d23ca91b74582904092b410d86b95fa8, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 705839906, guid: d23ca91b74582904092b410d86b95fa8, type: 3}
       propertyPath: m_StaticEditorFlags
@@ -12200,6 +12223,18 @@ PrefabInstance:
     - target: {fileID: 1181967141, guid: d23ca91b74582904092b410d86b95fa8, type: 3}
       propertyPath: drop.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Control
+      objectReference: {fileID: 0}
+    - target: {fileID: 1181967143, guid: d23ca91b74582904092b410d86b95fa8, type: 3}
+      propertyPath: handT
+      value: 
+      objectReference: {fileID: 325516381}
+    - target: {fileID: 1181967143, guid: d23ca91b74582904092b410d86b95fa8, type: 3}
+      propertyPath: handGrabber
+      value: 
+      objectReference: {fileID: 986836001}
+    - target: {fileID: 1181967143, guid: d23ca91b74582904092b410d86b95fa8, type: 3}
+      propertyPath: distanceFromhand
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 1231565529, guid: d23ca91b74582904092b410d86b95fa8, type: 3}
       propertyPath: m_StaticEditorFlags

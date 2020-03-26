@@ -107,11 +107,11 @@ public class LinearDrive : MonoBehaviour
         }
     }
 
-    public void GrabCup()
+    public void GrabCup(GameObject obj)
     {
-        if(ElementsInside.Contains(this.gameObject))
+        if(ElementsInside.Contains(obj))
         {
-            ElementsInside.Remove(this.gameObject);               
+            ElementsInside.Remove(obj);               
         }
     }
 }
