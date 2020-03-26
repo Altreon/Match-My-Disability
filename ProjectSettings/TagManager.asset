@@ -9,6 +9,7 @@ TagManager:
   - Drivable
   - Immobile
   - CanvasObjectifs
+  - CupBoard
   layers:
   - Default
   - TransparentFX

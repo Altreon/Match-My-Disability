@@ -11,8 +11,13 @@ public class LinearDrive : MonoBehaviour
     private Vector3 lastPos;    
     [SerializeField]
     GameObject door;
-    bool isGrabb;
+
+    [SerializeField]
+    private bool isGrabb;
     private Rigidbody rb;
+
+    [SerializeField]
+    public List<GameObject> ElementsInside = new List<GameObject>();
 
     void Start()
     {
@@ -31,6 +36,12 @@ public class LinearDrive : MonoBehaviour
     {
         isGrabb = true;
         rb.isKinematic = false;
+
+        for(int i = 0 ; i < ElementsInside.Count ; i++)
+        {
+            ElementsInside[i].GetComponent<Rigidbody>().useGravity = false;
+            ElementsInside[i].GetComponent<Rigidbody>().isKinematic = true;
+        }
     }
 
     public void Drop()
@@ -38,6 +49,12 @@ public class LinearDrive : MonoBehaviour
         transform.position = door.GetComponent<Transform>().transform.position + new Vector3(decalage,0.028f,0f);
         isGrabb = false;
         rb.isKinematic = true;
+
+        for(int i = 0 ; i < ElementsInside.Count ; i++)
+        {
+            ElementsInside[i].GetComponent<Rigidbody>().useGravity = true;
+            ElementsInside[i].GetComponent<Rigidbody>().isKinematic = false;
+        }
     }
 
 
@@ -46,6 +63,12 @@ public class LinearDrive : MonoBehaviour
         if(lastPos != transform.position && isGrabb == true)
         {
             rb.MovePosition(transform.position - new Vector3(decalage,0f,0f));
+
+            for(int i = 0 ; i < ElementsInside.Count ; i++)
+            {
+                ElementsInside[i].GetComponent<Rigidbody>().MovePosition(transform.position - new Vector3(decalage,0f,0f));
+            }
+
             lastPos = transform.position;
         }
 
@@ -57,6 +80,11 @@ public class LinearDrive : MonoBehaviour
 
             rb.MovePosition(transform.position - new Vector3(decalage,0f,0f));
 
+            for(int i = 0 ; i < ElementsInside.Count ; i++)
+            {
+                ElementsInside[i].GetComponent<Rigidbody>().MovePosition(transform.position - new Vector3(decalage,0f,0f));
+            }
+
             lastPos = transform.position; 
         }
 
@@ -67,6 +95,11 @@ public class LinearDrive : MonoBehaviour
             transform.position = pos;
 
             rb.MovePosition(transform.position - new Vector3(decalage,0f,0f));
+
+            for(int i = 0 ; i < ElementsInside.Count ; i++)
+            {
+                ElementsInside[i].GetComponent<Rigidbody>().MovePosition(transform.position - new Vector3(decalage,0f,0f));
+            }
 
             lastPos = transform.position; 
         }
