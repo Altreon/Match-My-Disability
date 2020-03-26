@@ -14,7 +14,9 @@ public class stickController : MonoBehaviour
     [SerializeField] private float deadzone = 0.25f;
     [SerializeField] private float rotateStick = 10f;
 
-    public void Control(bool control){
+    bool handCollision = false;
+
+    /*public void Control(bool control){
         controlled = control;
 
         if(control){
@@ -24,9 +26,24 @@ public class stickController : MonoBehaviour
             handRenderer.enabled = true;
             fakeHandRenderer.enabled = false;
         }
-    }
+    }*/
 
     void Update () {
+        if(handCollision && OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger) > deadzone){
+            if(!controlled){
+                controlled = true;
+
+                handRenderer.enabled = false;
+                fakeHandRenderer.enabled = true;
+            }
+        }else{
+            if(controlled){
+                controlled = false;
+
+                handRenderer.enabled = true;
+                fakeHandRenderer.enabled = false;
+            }
+        }
         
         if(!controlled){
             return;
@@ -35,6 +52,7 @@ public class stickController : MonoBehaviour
         Vector2 axis = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick);
 
         if (axis.magnitude < deadzone){
+            transform.rotation = transform.parent.rotation;
             return;
         }
 
@@ -59,5 +77,21 @@ public class stickController : MonoBehaviour
         }
 
         chairController.Move(axis);
+    }
+
+    void OnTriggerEnter(Collider collider) {
+        if(collider.gameObject.layer != LayerMask.NameToLayer("Hand")){
+            return;
+        }
+
+        handCollision = true;
+    }
+
+    void OnTriggerExit(Collider collider) {
+        if(collider.gameObject.layer != LayerMask.NameToLayer("Hand")){
+            return;
+        }
+
+        handCollision = false;
     }
 }

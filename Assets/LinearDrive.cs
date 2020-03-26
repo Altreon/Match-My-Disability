@@ -16,7 +16,7 @@ public class LinearDrive : MonoBehaviour
 
     void Start()
     {
-        isGrabb = false;
+        isGrabb = true;
         rb = door.GetComponent<Rigidbody>();
         rb.isKinematic = true;
         close = transform.position.x;
