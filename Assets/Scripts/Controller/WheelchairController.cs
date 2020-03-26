@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class WheelchairController : MonoBehaviour
 {
-    [SerializeField] private float deadzone;
     [SerializeField] private float forwardSpeed;
     [SerializeField] private float backwardSpeed;
     [SerializeField] private float rotateSpeed;
@@ -25,12 +24,7 @@ public class WheelchairController : MonoBehaviour
         */
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        Vector2 axis = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick);
-        if (axis.magnitude < deadzone)
-            return;
+    public void Move(Vector2 axis){
         if (Mathf.Abs(axis.y) > Mathf.Abs(axis.x))
         {
             //Déplacement vertical
@@ -54,6 +48,5 @@ public class WheelchairController : MonoBehaviour
                 transform.rotation = Quaternion.Slerp(transform.rotation, transform.rotation * Quaternion.Euler(-Vector3.up * 90), rotateSpeed * Time.deltaTime);
             }
         }
-        
     }
 }

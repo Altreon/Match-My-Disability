@@ -136,10 +136,22 @@ MonoBehaviour:
   m_grabPoints: []
   grab:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 780512717}
+        m_MethodName: Set
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   drop:
     m_PersistentCalls:
       m_Calls: []
+  isHightLight: 1
   hightLightDefaultColor: {r: 0, g: 0.5019608, b: 1, a: 1}
   hightLightTriggerColor: {r: 0.09803922, g: 0.09803922, b: 0.4392157, a: 1}
   hightLightGrabColor: {r: 0.29803923, g: 0.73333335, b: 0.09019608, a: 1}
@@ -255,6 +267,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342027773478082015, guid: 859eaaf8834940549ad3d5f04cbbd78c,
+        type: 3}
+      propertyPath: moveWithTransform
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 859eaaf8834940549ad3d5f04cbbd78c, type: 3}
