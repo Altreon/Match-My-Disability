@@ -42,6 +42,8 @@ public class SongBarSetting : MonoBehaviour
             m_volume = 0f;
             Debug.Log("Song can't be decreased");
         }
+
+        AudioListener.volume = GetVolume();
     }
 
     public void IncreaseVolume()
@@ -64,6 +66,8 @@ public class SongBarSetting : MonoBehaviour
             m_volume = 100f;
             Debug.Log("Song can't be increased");
         }
+
+        AudioListener.volume = GetVolume();
     }
 
     public void MuteVolume()
@@ -78,6 +82,8 @@ public class SongBarSetting : MonoBehaviour
             m_isMute = true;
             m_songSlider.value = 0f;
         }
+
+        AudioListener.volume = GetVolume();
     }
 
     public float GetVolume()
