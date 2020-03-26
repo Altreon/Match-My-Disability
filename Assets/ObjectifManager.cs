@@ -15,9 +15,19 @@ public class ObjectifManager : MonoBehaviour
         get { return _instance; }
     }
 
-    [SerializeField] private GameObject objectifCoffee;
-    [SerializeField] private GameObject objectifNotepad;
+    [SerializeField] private GameObject[] objectifCoffee;
+    [SerializeField] private GameObject[] objectifNotepad;
 
+    private int nbObjCoffeeDone = 0;
+    private int nbObjNotepadDone = 0;
+    public int StepCoffee
+    {
+        get { return nbObjCoffeeDone; }
+    }
+    public int StepNote
+    {
+        get { return nbObjNotepadDone; }
+    }
     // Start is called before the first frame update
     void Awake()
     {
@@ -48,13 +58,19 @@ public class ObjectifManager : MonoBehaviour
 
     public void setObjectif(string name)
     {
-        if(name.Equals("coffee"))
-            objectifCoffee.SetActive(true);
-        else if(name.Equals("note"))
-            objectifNotepad.SetActive(true);
+        if(name.Equals("coffee") && nbObjCoffeeDone < objectifCoffee.Length){
+            objectifCoffee[nbObjCoffeeDone++].SetActive(true);
+            if (nbObjCoffeeDone == objectifCoffee.Length - 1)
+                objectifCoffee[nbObjCoffeeDone++].SetActive(true);
+        }
+        else if(name.Equals("note") && nbObjNotepadDone < objectifNotepad.Length){
+            objectifNotepad[nbObjNotepadDone++].SetActive(true);
+            if (nbObjNotepadDone == objectifNotepad.Length - 1)
+                objectifNotepad[nbObjNotepadDone++].SetActive(true);
+        }
         else
         {
-            Debug.LogError("Unkown name : " + name + ", please use 'coffee' or 'note'");
+            Debug.LogError("Unkown name : " + name + ", please use 'coffee' or 'note'.\nCoffee : " + nbObjCoffeeDone + " / " + objectifCoffee.Length + "\nNotepad : " + nbObjNotepadDone + " / " + objectifNotepad.Length);
         }
     }
     

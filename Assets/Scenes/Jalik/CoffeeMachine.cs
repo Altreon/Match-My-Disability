@@ -11,10 +11,12 @@ public class CoffeeMachine : MonoBehaviour
     [SerializeField] private GameObject particles;
     [SerializeField] private GameObject particlesCoffeeMaker;
     //[SerializeField] private OVRGrabber toActivateAtEnd;
-
+    private setObjectif objSetter;
+    private bool objDone = false;
     private void Start()
     {
         cafe = gameObject.GetComponent<AudioSource>();
+        objSetter = gameObject.GetComponent<setObjectif>();
     }
 
     public void SetCupIsPresent()
@@ -25,20 +27,23 @@ public class CoffeeMachine : MonoBehaviour
     public void ButtonPressed()
     {
         Debug.Log("pressed");
-        if (cupIsPresent)
+        if (cupIsPresent && !cafe.isPlaying)
         {
-            if(!buttonHasBeenPressed)
+            if(!buttonHasBeenPressed && !objDone)
             {
                 Debug.Log("OK");
                 buttonHasBeenPressed = true;
                 cafe.PlayOneShot(cafeClip);
-                StartCoroutine(waitForEndOfSound());
-                
+                StartCoroutine(waitForEndOfSound(true));
+            }else if (objDone)
+            {
+                cafe.PlayOneShot(cafeClip);
+                StartCoroutine(waitForEndOfSound(false));
             }
         }
     }
 
-    IEnumerator waitForEndOfSound()
+    IEnumerator waitForEndOfSound(bool setObj)
     {
         particlesCoffeeMaker.SetActive(true);
         while (cafe.isPlaying)
@@ -47,9 +52,14 @@ public class CoffeeMachine : MonoBehaviour
 
         }
         particlesCoffeeMaker.SetActive(false);
+        if(setObj)
+            setThisObjectif();
+    }
 
-        //toActivateAtEnd.enabled = true;
+    private void setThisObjectif()
+    {
         particles.SetActive(true);
-        ObjectifManager.Instance.setObjectif("coffee");
+        objSetter.Set();
+        objDone = true;
     }
 }
