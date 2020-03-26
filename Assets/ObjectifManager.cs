@@ -41,7 +41,7 @@ public class ObjectifManager : MonoBehaviour
         maxScale = transform.localScale;
         Debug.Log((transform.position - targetCamera.transform.position).magnitude);
         */
-        gameObject.SetActive(false);
+        //TODO : ENLEVER LE COMMENTAIRE gameObject.SetActive(false);
     }
 
     private void OnDisable()

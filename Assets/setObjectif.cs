@@ -6,7 +6,10 @@ using UnityEngine;
 public enum OBJECTIF
 {
     COFFEE,
-    NOTEPAD
+    NOTEPAD,
+    PHONE,
+    COMPUTER,
+    WORK
 };
 public class setObjectif : MonoBehaviour
 {
@@ -24,13 +27,39 @@ public class setObjectif : MonoBehaviour
 
     public void Set()
     {
+        
         if (instanceManager == null)
         {
             Debug.LogError("C'est bizarre y'a pas l'objectif manager qui est set");
             instanceManager = ObjectifManager.Instance;
+            if(instanceManager == null)
+                Debug.LogError("Ok là c'est pas normal");
         }
+        Debug.Log("set ! " + objectifToSet + " ; " + requiredStep + " ; " + setOnce + " ; " + hasBeenSet + " ; " +
+                  instanceManager.StepCoffee);
+        switch (objectifToSet)
+        {
+            case OBJECTIF.COFFEE:
+                test("coffee", instanceManager.StepCoffee);
+                break;
+            case OBJECTIF.NOTEPAD:
+                test("note", instanceManager.StepNote);
+                break;
+            case OBJECTIF.PHONE:
+                test("phone", 0);
+                break;
+            case OBJECTIF.COMPUTER:
+                test("computer", 0);
+                break;
+            default:
+                test("work", 0);
+                break;
+
+        }
+        /*
         if (objectifToSet == OBJECTIF.COFFEE)
         {
+            
             if ((!setOnce || !hasBeenSet) && instanceManager.StepCoffee >= requiredStep)
             {
                 instanceManager.setObjectif("coffee");
@@ -44,6 +73,16 @@ public class setObjectif : MonoBehaviour
                 instanceManager.setObjectif("note");
                 hasBeenSet = true;
             }
+        }
+        */
+    }
+
+    private void test(string name, int nb)
+    {
+        if ((!setOnce || !hasBeenSet) && nb >= requiredStep)
+        {
+            instanceManager.setObjectif(name);
+            hasBeenSet = true;
         }
     }
 }

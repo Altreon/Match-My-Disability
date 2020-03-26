@@ -15,8 +15,11 @@ public class CoffeeMachine : MonoBehaviour
     private bool objDone = false;
     private void Start()
     {
-        cafe = gameObject.GetComponent<AudioSource>();
+        //cafe = gameObject.GetComponent<AudioSource>();
         objSetter = gameObject.GetComponent<setObjectif>();
+        
+        //DEBUG
+        GameObject.Find("CoffeeCup").GetComponent<setObjectif>().Set();
     }
 
     public void SetCupIsPresent()
@@ -26,7 +29,7 @@ public class CoffeeMachine : MonoBehaviour
 
     public void ButtonPressed()
     {
-        Debug.Log("pressed");
+        Debug.Log("pressed" + cupIsPresent+ " ; " + cafe.isPlaying);
         if (cupIsPresent && !cafe.isPlaying)
         {
             if(!buttonHasBeenPressed && !objDone)

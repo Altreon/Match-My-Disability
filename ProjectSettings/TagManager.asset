@@ -9,6 +9,7 @@ TagManager:
   - Drivable
   - Immobile
   - CanvasObjectifs
+  - FinalChair
   layers:
   - Default
   - TransparentFX
