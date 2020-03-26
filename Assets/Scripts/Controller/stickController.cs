@@ -29,8 +29,8 @@ public class stickController : MonoBehaviour
     }*/
 
     void Update () {
-        if(handCollision && OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger) > deadzone){
-            if(!controlled){
+        if(OVRInput.Get(OVRInput.Axis1D.SecondaryHandTrigger) > deadzone){
+            if(handCollision && !controlled){
                 controlled = true;
 
                 handRenderer.enabled = false;

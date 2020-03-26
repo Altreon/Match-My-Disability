@@ -21,13 +21,15 @@ public class LinearDrive : MonoBehaviour
 
     void Start()
     {
-        isGrabb = true;
+        isGrabb = false;
         rb = door.GetComponent<Rigidbody>();
         rb.isKinematic = true;
         close = transform.position.x;
         open = close + 0.442f;
         lastPos = transform.position;
         GetComponent<BoxCollider>().enabled = true;
+
+        Grab();
     }
 
     // Update is called once per frame
