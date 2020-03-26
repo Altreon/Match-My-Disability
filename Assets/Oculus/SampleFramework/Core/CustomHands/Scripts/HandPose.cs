@@ -41,15 +41,5 @@ namespace OVRTouchSample
         {
             get { return m_poseId; }
         }
-
-        public void GrabCup()
-        {
-            GameObject cupboard = GameObject.FindWithTag("CupBoard");
-
-            if(cupboard.GetComponent<LinearDrive>().ElementsInside.Contains(this.gameObject))
-            {
-                cupboard.GetComponent<LinearDrive>().ElementsInside.Remove(this.gameObject);               
-            }
-        }
     }
 }

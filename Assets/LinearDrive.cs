@@ -106,4 +106,12 @@ public class LinearDrive : MonoBehaviour
             lastPos = transform.position; 
         }
     }
+
+    public void GrabCup()
+    {
+        if(ElementsInside.Contains(this.gameObject))
+        {
+            ElementsInside.Remove(this.gameObject);               
+        }
+    }
 }

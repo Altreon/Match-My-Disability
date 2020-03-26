@@ -1929,6 +1929,36 @@ PrefabInstance:
       propertyPath: m_Name
       value: CoffeeCup (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4044105921667851378, guid: 7fd6694b50e24e84e9e5a0e3fa2b4125,
+        type: 3}
+      propertyPath: grab.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4044105921667851378, guid: 7fd6694b50e24e84e9e5a0e3fa2b4125,
+        type: 3}
+      propertyPath: grab.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4044105921667851378, guid: 7fd6694b50e24e84e9e5a0e3fa2b4125,
+        type: 3}
+      propertyPath: grab.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4044105921667851378, guid: 7fd6694b50e24e84e9e5a0e3fa2b4125,
+        type: 3}
+      propertyPath: grab.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 1144266481}
+    - target: {fileID: 4044105921667851378, guid: 7fd6694b50e24e84e9e5a0e3fa2b4125,
+        type: 3}
+      propertyPath: grab.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: GrabCup
+      objectReference: {fileID: 0}
+    - target: {fileID: 4044105921667851378, guid: 7fd6694b50e24e84e9e5a0e3fa2b4125,
+        type: 3}
+      propertyPath: grab.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 4044105921668161765, guid: 7fd6694b50e24e84e9e5a0e3fa2b4125,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5301,6 +5331,18 @@ CapsuleCollider:
   m_Height: 0.05
   m_Direction: 2
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1144266481 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6219416961418524323, guid: 6547591578c0ca947b5ad4843655c78f,
+    type: 3}
+  m_PrefabInstance: {fileID: 901154972}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 55abbceea98abb746b6fcd8268a5f609, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1145719219
 GameObject:
   m_ObjectHideFlags: 0
