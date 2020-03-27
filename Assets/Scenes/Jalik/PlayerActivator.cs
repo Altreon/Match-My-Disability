@@ -108,7 +108,7 @@ public class PlayerActivator : MonoBehaviour
         dataPlayer.height = heightPlayerWalk;
         wheelchairCollider.enabled = false;
         playerRigidbody.mass = massPlayer;
-        StartCoroutine(UndoVignette());
+        //StartCoroutine(UndoVignette());
     }
     
     public void toDrive()
@@ -120,14 +120,19 @@ public class PlayerActivator : MonoBehaviour
         transform.position = placeToSpawnDrive.position;
         transform.rotation = placeToSpawnDrive.rotation;
 
+
+        /*OVRPlayerController.transform.position = new Vector3(OVRPlayerController.transform.position.x, 
+                                                   placeToSpawnDrive.position.y,
+                                                   OVRPlayerController.transform.position.z);*/
+
         //transform.position += Vector3.up * offsetWalkDrive;
 
         dataPlayer.height = heightPlayerWheelChair;
         wheelchairCollider.enabled = true;
         playerRigidbody.mass = massWheelChain;
-        if (OVRPlayerController.transform.localPosition.y < 1f)
+        //if (OVRPlayerController.transform.localPosition.y < 1f)
             //OVRPlayerController.transform.localPosition = Vector3.up * 1.279f;
-        StartCoroutine(UndoVignette());
+        //StartCoroutine(UndoVignette());
     }
 
     IEnumerator UndoVignette()
