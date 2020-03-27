@@ -8,7 +8,7 @@ public class PlayerActivator : MonoBehaviour
     [SerializeField] private OVRPlayerController walkable;
 
     [SerializeField] private WheelchairController drivable;
-    [SerializeField] private float offsetWalkDrive;
+    //[SerializeField] private float offsetWalkDrive;
 
     [SerializeField] private GameObject wheelchairModel;
     [SerializeField] private Collider wheelchairCollider;
@@ -66,7 +66,7 @@ public class PlayerActivator : MonoBehaviour
             Debug.LogError("massWheelChain est à 0 ! Initailise le dans l'éditeur stp");
     }
 
-    public void switchPlayer(int nbPlayer)
+    /*public void switchPlayer(int nbPlayer)
     {
         StartCoroutine(StartVignette(nbPlayer));
     }
@@ -92,34 +92,36 @@ public class PlayerActivator : MonoBehaviour
             toWalk();
         else
             toDrive();
-    }
+    }*/
     
-    private void toWalk()
+    public void toWalk()
     {
         walkable.enabled = true;
         drivable.enabled = false;
 
-        transform.position -= Vector3.up * offsetWalkDrive;
-
         wheelchairModel.SetActive(false);
         transform.position = placeToSpawnWalk.position;
         transform.rotation = placeToSpawnWalk.rotation;
+
+        //transform.position -= Vector3.up * offsetWalkDrive;
+
         dataPlayer.height = heightPlayerWalk;
         wheelchairCollider.enabled = false;
         playerRigidbody.mass = massPlayer;
         StartCoroutine(UndoVignette());
     }
     
-    private void toDrive()
+    public void toDrive()
     {
         walkable.enabled = false;
         drivable.enabled = true;
 
-        transform.position += Vector3.up * offsetWalkDrive;
-
         wheelchairModel.SetActive(true);
         transform.position = placeToSpawnDrive.position;
         transform.rotation = placeToSpawnDrive.rotation;
+
+        //transform.position += Vector3.up * offsetWalkDrive;
+
         dataPlayer.height = heightPlayerWheelChair;
         wheelchairCollider.enabled = true;
         playerRigidbody.mass = massWheelChain;
