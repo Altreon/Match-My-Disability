@@ -30,7 +30,7 @@ public class WheelchairController : MonoBehaviour
     }
 
     public void Move(Vector2 axis){
-        if (axis.x < float.Epsilon && axis.y < float.Epsilon)
+        if (axis.x < 0.2f && axis.y < 0.2f)
         {
             if (As.clip.Equals(wheel_continue) || As.clip.Equals(wheel_turn))
             {
@@ -38,8 +38,8 @@ public class WheelchairController : MonoBehaviour
                 As.Stop();
                 As.PlayOneShot(wheel_end);
             }
-            lastFrame = Vector2.zero;
-            return;
+            //lastFrame = Vector2.zero;
+            //return;
         }
         
         if (Mathf.Abs(axis.y) > Mathf.Abs(axis.x))
