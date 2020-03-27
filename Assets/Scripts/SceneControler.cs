@@ -44,7 +44,12 @@ public class SceneControler : MonoBehaviour
 
     private void SwitchPlayer(int levelIndex)
     {
-        activator.switchPlayer(levelIndex);
+        //activator.switchPlayer(levelIndex);
+        if(levelIndex == 0){
+            activator.toWalk();
+        }else{
+            activator.toDrive();
+        }
         /* Désolé ça ne marchait pas d'activer et désactiver les gameobject finalement
          Il faut que tout se fasse dans le même game object et c'est pour ça que j'ai fais un nouveau script
         if (levelIndex == 0)
