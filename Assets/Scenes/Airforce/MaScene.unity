@@ -650,18 +650,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 738085394}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &159254743 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 460780227882806454, guid: 6393ae1c656c0964f90e1e7a3f769860,
-    type: 3}
-  m_PrefabInstance: {fileID: 738085394}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 159254742}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aab4c587457d86f4ca80582f946785ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &194681585
 GameObject:
   m_ObjectHideFlags: 0
@@ -6667,7 +6655,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   decalage: 0.287
   door: {fileID: 1838155658}
-  isGrabb: 1
+  isGrabb: 0
   ElementsInside:
   - {fileID: 159254742}
 --- !u!114 &433161821
@@ -13272,7 +13260,7 @@ PrefabInstance:
     - target: {fileID: 460780227882806449, guid: 6393ae1c656c0964f90e1e7a3f769860,
         type: 3}
       propertyPath: grab.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 460780227882806449, guid: 6393ae1c656c0964f90e1e7a3f769860,
         type: 3}
@@ -13283,7 +13271,7 @@ PrefabInstance:
         type: 3}
       propertyPath: grab.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 159254743}
+      objectReference: {fileID: 433161820}
     - target: {fileID: 460780227882806449, guid: 6393ae1c656c0964f90e1e7a3f769860,
         type: 3}
       propertyPath: grab.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -13292,7 +13280,7 @@ PrefabInstance:
     - target: {fileID: 460780227882806449, guid: 6393ae1c656c0964f90e1e7a3f769860,
         type: 3}
       propertyPath: grab.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
-      value: UnityEngine.Object, UnityEngine
+      value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 460780227882806450, guid: 6393ae1c656c0964f90e1e7a3f769860,
         type: 3}
