@@ -146,7 +146,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 248321966}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1.56, y: 1.262, z: -1.939}
+  m_LocalPosition: {x: -1.56, y: 0.262, z: -1.939}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -171,15 +171,9 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1417667197176546141, guid: d23ca91b74582904092b410d86b95fa8,
-        type: 3}
-      propertyPath: m_Center.y
-      value: -0.6426446
-      objectReference: {fileID: 0}
-    - target: {fileID: 1832630799386076058, guid: d23ca91b74582904092b410d86b95fa8,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 0
+    - target: {fileID: 379044957, guid: d23ca91b74582904092b410d86b95fa8, type: 3}
+      propertyPath: m_Volume
+      value: 0.2
       objectReference: {fileID: 0}
     - target: {fileID: 2560272406105872267, guid: d23ca91b74582904092b410d86b95fa8,
         type: 3}
@@ -191,16 +185,6 @@ PrefabInstance:
       propertyPath: placeToSpawnWalk
       value: 
       objectReference: {fileID: 2049172613}
-    - target: {fileID: 2560272406105872267, guid: d23ca91b74582904092b410d86b95fa8,
-        type: 3}
-      propertyPath: postProcess
-      value: 
-      objectReference: {fileID: 521911162}
-    - target: {fileID: 2560272406105872267, guid: d23ca91b74582904092b410d86b95fa8,
-        type: 3}
-      propertyPath: offsetWalkDrive
-      value: 0.7
-      objectReference: {fileID: 0}
     - target: {fileID: 7660408658145726452, guid: d23ca91b74582904092b410d86b95fa8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -209,7 +193,7 @@ PrefabInstance:
     - target: {fileID: 7660408658145726452, guid: d23ca91b74582904092b410d86b95fa8,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.51
+      value: 0.618
       objectReference: {fileID: 0}
     - target: {fileID: 7660408658145726452, guid: d23ca91b74582904092b410d86b95fa8,
         type: 3}
@@ -260,26 +244,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Wheelchair_and_player
-      objectReference: {fileID: 0}
-    - target: {fileID: 7660408658145726459, guid: d23ca91b74582904092b410d86b95fa8,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7660408659825510267, guid: d23ca91b74582904092b410d86b95fa8,
-        type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7660408659825810261, guid: d23ca91b74582904092b410d86b95fa8,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7660408659836564147, guid: d23ca91b74582904092b410d86b95fa8,
-        type: 3}
-      propertyPath: m_Height
-      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d23ca91b74582904092b410d86b95fa8, type: 3}
@@ -387,18 +351,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2fde998c933f8744dadad9a9c4f7de92, type: 3}
---- !u!114 &521911162 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6017477511916769412, guid: 2fde998c933f8744dadad9a9c4f7de92,
-    type: 3}
-  m_PrefabInstance: {fileID: 521911161}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1962283903}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b9a305e18de0c04dbd257a21cd47087, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1962283903 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6017477511916769414, guid: 2fde998c933f8744dadad9a9c4f7de92,

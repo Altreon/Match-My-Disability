@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Recuperator : MonoBehaviour
 {
-    public float heightLimit;
+    public float heightLimitToReset = -2f;
     public float resetSpeed;
     public float acceptDistance = 0.01f;
 
@@ -21,21 +21,20 @@ public class Recuperator : MonoBehaviour
         originalRot = transform.rotation;
 
         rb = GetComponent<Rigidbody>();
-        col = GetComponent<MeshCollider>();
+        col = GetComponent<Collider>();
     }
 
     // Update is called once per frame
     void Update()
     {
         if(!reset){
-            /*Debug.Log(transform.position.y);
-            if(transform.position.y < heightLimit){
+            if(transform.position.y <= heightLimitToReset){
                 rb.isKinematic = true;
                 rb.detectCollisions = false;
                 col.enabled = false;
 
                 reset = true;
-            }*/
+            }
 
         }else{
             transform.position = Vector3.Lerp(transform.position, originalPos, Time.deltaTime * resetSpeed);

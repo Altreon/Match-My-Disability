@@ -59,13 +59,15 @@ public class stickController : MonoBehaviour
                 fakeHandRenderer.enabled = false;
             }
         }
+
+        Vector2 axis = OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick);
+
+        chairController.UpdateSound(axis, deadzone);
         
         if(!controlled){
             transform.rotation = transform.parent.rotation;
             return;
         }
-
-        Vector2 axis = OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick);
 
         if (axis.magnitude < deadzone){
             transform.rotation = transform.parent.rotation;

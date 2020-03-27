@@ -57,20 +57,6 @@ public class PropsHolder : MonoBehaviour
         rend.enabled = !accepted;
         propsPlaced.Invoke(accepted);
         this.accepted = accepted;
-        //On tente le snap
-        /*
-        if(accepted){
-            target.position = transform.position;
-            target.rotation = transform.rotation;
-            toVelocityZero.velocity = Vector3.zero;
-            //grabber.GrabEnd();
-            toDeactivate.enabled = false;
-        }
-        //else
-        //{
-            //toDeactivate.enabled = true;
-        //}
-        */
     }
 
     void blinkUpdate () {

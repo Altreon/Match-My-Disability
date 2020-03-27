@@ -30,46 +30,9 @@ public class WheelchairController : MonoBehaviour
     }
 
     public void Move(Vector2 axis){
-        if (axis.x < 0.2f && axis.y < 0.2f)
-        {
-            if (As.clip.Equals(wheel_continue) || As.clip.Equals(wheel_turn))
-            {
-                As.loop = false;
-                As.clip = wheel_end;
-                As.Stop();
-                As.Play();
-                //As.Stop();
-                //As.PlayOneShot(wheel_end);
-            }
-            //lastFrame = Vector2.zero;
-            //return;
-        }
-        
         if (Mathf.Abs(axis.y) > Mathf.Abs(axis.x))
         {
             //Déplacement vertical
-            if (lastFrame.x < float.Epsilon && lastFrame.y < float.Epsilon)
-            {
-                if(!As.isPlaying)
-                {
-                    As.loop = false;
-                    As.clip = wheel_start;
-                    As.Stop();
-                    As.Play();
-                    //As.Stop();
-                    //As.PlayOneShot(wheel_start);
-                }
-            }
-            else
-            {
-                if (!As.isPlaying)
-                {
-                    As.loop = true;
-                    As.clip = wheel_continue;
-                    As.Stop();
-                    As.Play();
-                }
-            }
             if(axis.y > 0f)
                 transform.position = Vector3.Lerp(transform.position, transform.position + transform.forward, forwardSpeed * Time.deltaTime);
             else
@@ -82,14 +45,53 @@ public class WheelchairController : MonoBehaviour
                 transform.rotation = Quaternion.Slerp(transform.rotation, transform.rotation * Quaternion.Euler(Vector3.up * 90), rotateSpeed * Time.deltaTime);
             }
             else{
-                //transform.Rotate(0f, rotateSpeed * -1f * Time.deltaTime, 0f);
                 transform.rotation = Quaternion.Slerp(transform.rotation, transform.rotation * Quaternion.Euler(-Vector3.up * 90), rotateSpeed * Time.deltaTime);
             }
+        }
+    }
+
+    public void UpdateSound(Vector2 axis, float deadzone){
+        if (Mathf.Abs(axis.x) < deadzone && Mathf.Abs(axis.y) < deadzone)
+        {
+            if (!As.clip.Equals(wheel_end))
+            {
+                As.Stop();
+                As.loop = false;
+                As.clip = wheel_end;
+                As.Play();
+            }
+            lastFrame = Vector2.zero;
+            return;
+        }
+        
+        if (Mathf.Abs(axis.y) > Mathf.Abs(axis.x))
+        {
+            //Déplacement vertical
+            if (!As.clip.Equals(wheel_start) && Mathf.Abs(axis.y) < 0.4f)
+            {
+                As.Stop();
+                As.loop = false;
+                As.clip = wheel_start;
+                As.Play();
+                //As.Stop();
+                //As.PlayOneShot(wheel_start);
+            }
+            else if(!As.isPlaying || (!As.clip.Equals(wheel_start) && !As.clip.Equals(wheel_continue)))
+            {
+                As.Stop();
+                As.loop = true;
+                As.clip = wheel_continue;
+                As.Play();
+            }
+        }
+        else
+        {
+            //Rotation
             if (!As.clip.Equals(wheel_turn))
             {
+                As.Stop();
                 As.loop = true;
                 As.clip = wheel_turn;
-                As.Stop();
                 As.Play();
             }
         }
