@@ -24,13 +24,14 @@ public class PlayerActivator : MonoBehaviour
     [SerializeField] private Transform placeToSpawnDrive;
     [SerializeField] private Transform placeToSpawnWalk;
     [SerializeField] private float timeTransition;
-    [SerializeField] private PostProcessVolume postProcess;
-    private Vignette vignette;
+    //[SerializeField] private PostProcessVolume postProcess;
+    //private Vignette vignette;
     private float startingIntensity;
 
     // Start is called before the first frame update
     void Start()
     {
+        /*
         if(postProcess == null)
             Debug.LogError("postProcess est null ! Initailise le dans l'éditeur stp");
         vignette = postProcess.profile.GetSetting<Vignette>();
@@ -38,6 +39,7 @@ public class PlayerActivator : MonoBehaviour
             Debug.LogError("Ayaaaah le post process contient pas de vignette c chaud frer");
         startingIntensity = vignette.intensity.value;
         Debug.Log("intensity = " + vignette.intensity.value);
+        */
         if(walkable == null)
             Debug.LogError("Walkable est null ! Initailise le dans l'éditeur stp");
         if(drivable == null)
@@ -135,6 +137,7 @@ public class PlayerActivator : MonoBehaviour
         //StartCoroutine(UndoVignette());
     }
 
+    /*
     IEnumerator UndoVignette()
     {
         float startTime = Time.time;
@@ -153,4 +156,5 @@ public class PlayerActivator : MonoBehaviour
             yield return null;
         } while (currentTime  < endTime || vignette.intensity > startingIntensity);
     }
+    */
 }
