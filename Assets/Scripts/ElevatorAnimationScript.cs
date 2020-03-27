@@ -29,6 +29,7 @@ public class ElevatorAnimationScript : MonoBehaviour
 
     public void CloseDoor()
     {
+        /*
         if (m_isDoorOpen && !anim.isPlaying)
         {
             Debug.Log("Door will close");
@@ -41,6 +42,7 @@ public class ElevatorAnimationScript : MonoBehaviour
         {
             Debug.Log("Door is already closed");
         }
+        */ //On test qu'elle se ferme jamais
     }
 
 

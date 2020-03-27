@@ -171,6 +171,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1417667197176546141, guid: d23ca91b74582904092b410d86b95fa8,
+        type: 3}
+      propertyPath: m_Size.y
+      value: 1.3754506
+      objectReference: {fileID: 0}
+    - target: {fileID: 1417667197176546141, guid: d23ca91b74582904092b410d86b95fa8,
+        type: 3}
+      propertyPath: m_Center.y
+      value: 0.6661656
+      objectReference: {fileID: 0}
+    - target: {fileID: 1417667197176546141, guid: d23ca91b74582904092b410d86b95fa8,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2560272406105872267, guid: d23ca91b74582904092b410d86b95fa8,
         type: 3}
       propertyPath: placeToSpawnDrive
@@ -186,11 +201,6 @@ PrefabInstance:
       propertyPath: postProcess
       value: 
       objectReference: {fileID: 521911162}
-    - target: {fileID: 2560272406105872267, guid: d23ca91b74582904092b410d86b95fa8,
-        type: 3}
-      propertyPath: offsetWalkDrive
-      value: 0.7578301
-      objectReference: {fileID: 0}
     - target: {fileID: 7660408658145726452, guid: d23ca91b74582904092b410d86b95fa8,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -244,6 +254,11 @@ PrefabInstance:
     - target: {fileID: 7660408658145726452, guid: d23ca91b74582904092b410d86b95fa8,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7660408658145726453, guid: d23ca91b74582904092b410d86b95fa8,
+        type: 3}
+      propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7660408658145726459, guid: d23ca91b74582904092b410d86b95fa8,
