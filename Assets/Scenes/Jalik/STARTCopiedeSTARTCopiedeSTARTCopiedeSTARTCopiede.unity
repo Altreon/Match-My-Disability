@@ -467,6 +467,23 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 219646694, guid: e8cc2d11f791047b38ef7dfd21f326c2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 129
+      objectReference: {fileID: 0}
+    - target: {fileID: 219646694, guid: e8cc2d11f791047b38ef7dfd21f326c2, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 1537.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 219646695, guid: e8cc2d11f791047b38ef7dfd21f326c2, type: 3}
+      propertyPath: m_Text
+      value: "Pour commencer, appuyer sur le bouton correspondant \xE0 l'\xE9tage
+        1.\n==> Attrapez le stick rouge du fauteuil avant de vous d\xE9placer"
+      objectReference: {fileID: 0}
+    - target: {fileID: 385187589, guid: e8cc2d11f791047b38ef7dfd21f326c2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 670085925957093333, guid: e8cc2d11f791047b38ef7dfd21f326c2,
         type: 3}
       propertyPath: clickEvent.m_PersistentCalls.m_Calls.Array.size
@@ -526,6 +543,11 @@ PrefabInstance:
         type: 3}
       propertyPath: clickEvent.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1664437767005357695, guid: e8cc2d11f791047b38ef7dfd21f326c2,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5341529328639904140, guid: e8cc2d11f791047b38ef7dfd21f326c2,
         type: 3}
