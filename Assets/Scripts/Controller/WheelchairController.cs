@@ -35,8 +35,11 @@ public class WheelchairController : MonoBehaviour
             if (As.clip.Equals(wheel_continue) || As.clip.Equals(wheel_turn))
             {
                 As.loop = false;
+                As.clip = wheel_end;
                 As.Stop();
-                As.PlayOneShot(wheel_end);
+                As.Play();
+                //As.Stop();
+                //As.PlayOneShot(wheel_end);
             }
             //lastFrame = Vector2.zero;
             //return;
@@ -45,13 +48,16 @@ public class WheelchairController : MonoBehaviour
         if (Mathf.Abs(axis.y) > Mathf.Abs(axis.x))
         {
             //Déplacement vertical
-            if ((lastFrame - Vector2.zero).magnitude < float.Epsilon)
+            if (lastFrame.x < float.Epsilon && lastFrame.y < float.Epsilon)
             {
                 if(!As.isPlaying)
                 {
                     As.loop = false;
+                    As.clip = wheel_start;
                     As.Stop();
-                    As.PlayOneShot(wheel_start);
+                    As.Play();
+                    //As.Stop();
+                    //As.PlayOneShot(wheel_start);
                 }
             }
             else

@@ -46,7 +46,7 @@ public class setObjectif : MonoBehaviour
                 test("note", instanceManager.StepNote);
                 break;
             case OBJECTIF.PHONE:
-                test("phone", 0);
+                test("phone", instanceManager.StepPhone);
                 break;
             case OBJECTIF.COMPUTER:
                 test("computer", 0);

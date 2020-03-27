@@ -33,6 +33,10 @@ public class ObjectifManager : MonoBehaviour
     {
         get { return nbObjNotepadDone; }
     }
+    public int StepPhone
+    {
+        get { return nbObjPhoneDone; }
+    }
     // Start is called before the first frame update
     void Awake()
     {
@@ -46,7 +50,7 @@ public class ObjectifManager : MonoBehaviour
         maxScale = transform.localScale;
         Debug.Log((transform.position - targetCamera.transform.position).magnitude);
         */
-        //TODO : ENLEVER LE COMMENTAIRE gameObject.SetActive(false);
+        gameObject.SetActive(false);
     }
 
     private void OnDisable()
