@@ -8,6 +8,7 @@ public class PlayerActivator : MonoBehaviour
     [SerializeField] private OVRPlayerController walkable;
 
     [SerializeField] private WheelchairController drivable;
+    [SerializeField] private float offsetWalkDrive;
 
     [SerializeField] private GameObject wheelchairModel;
     [SerializeField] private Collider wheelchairCollider;
@@ -97,6 +98,9 @@ public class PlayerActivator : MonoBehaviour
     {
         walkable.enabled = true;
         drivable.enabled = false;
+
+        transform.position -= Vector3.up * offsetWalkDrive;
+
         wheelchairModel.SetActive(false);
         transform.position = placeToSpawnWalk.position;
         transform.rotation = placeToSpawnWalk.rotation;
@@ -110,6 +114,9 @@ public class PlayerActivator : MonoBehaviour
     {
         walkable.enabled = false;
         drivable.enabled = true;
+
+        transform.position += Vector3.up * offsetWalkDrive;
+
         wheelchairModel.SetActive(true);
         transform.position = placeToSpawnDrive.position;
         transform.rotation = placeToSpawnDrive.rotation;
@@ -117,7 +124,7 @@ public class PlayerActivator : MonoBehaviour
         wheelchairCollider.enabled = true;
         playerRigidbody.mass = massWheelChain;
         if (OVRPlayerController.transform.localPosition.y < 1f)
-            OVRPlayerController.transform.localPosition = Vector3.up * 1.279f;
+            //OVRPlayerController.transform.localPosition = Vector3.up * 1.279f;
         StartCoroutine(UndoVignette());
     }
 

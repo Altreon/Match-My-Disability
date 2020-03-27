@@ -65,7 +65,7 @@ public class stickController : MonoBehaviour
             return;
         }
 
-        Vector2 axis = OVRInput.Get(OVRInput.Axis2D.PrimaryThumbstick);
+        Vector2 axis = OVRInput.Get(OVRInput.Axis2D.SecondaryThumbstick);
 
         if (axis.magnitude < deadzone){
             transform.rotation = transform.parent.rotation;
