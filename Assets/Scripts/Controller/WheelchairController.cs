@@ -30,9 +30,9 @@ public class WheelchairController : MonoBehaviour
     }
 
     public void Move(Vector2 axis){
-        if ((axis - Vector2.zero).magnitude < float.Epsilon)
+        if (axis.x < float.Epsilon && axis.y < float.Epsilon)
         {
-            if (lastFrame.magnitude > axis.magnitude)
+            if (As.clip.Equals(wheel_continue) || As.clip.Equals(wheel_turn))
             {
                 As.loop = false;
                 As.Stop();
@@ -79,7 +79,7 @@ public class WheelchairController : MonoBehaviour
                 //transform.Rotate(0f, rotateSpeed * -1f * Time.deltaTime, 0f);
                 transform.rotation = Quaternion.Slerp(transform.rotation, transform.rotation * Quaternion.Euler(-Vector3.up * 90), rotateSpeed * Time.deltaTime);
             }
-            if (!As.isPlaying)
+            if (!As.clip.Equals(wheel_turn))
             {
                 As.loop = true;
                 As.clip = wheel_turn;
