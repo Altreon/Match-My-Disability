@@ -60,7 +60,30 @@ public class ObjectifManager : MonoBehaviour
         if (_instance == null)
             _instance = this;
     }
-
+    
+    public void ResetObj(){
+        foreach(GameObject go in objectifCoffee){
+            go.SetActive(false);
+        }
+        foreach(GameObject go in objectifNotepad){
+            go.SetActive(false);
+        }
+        foreach(GameObject go in objectifChair){
+            go.SetActive(false);
+        }
+        foreach(GameObject go in objectifComputer){
+            go.SetActive(false);
+        }
+        foreach(GameObject go in objectifPhone){
+            go.SetActive(false);
+        }
+        nbObjCoffeeDone = 0;
+        nbObjNotepadDone = 0;
+        nbObjChairDone = 0;
+        nbObjComputerDone = 0;
+        nbObjPhoneDone = 0;
+    }
+    
     public void setObjectif(string name)
     {
         if(name.Equals("coffee") && nbObjCoffeeDone < objectifCoffee.Length){
